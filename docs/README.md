@@ -3,6 +3,8 @@
 Diagramas del proyecto **Sistema POS e Inventario – Las Casas del Rincón Guatemalteco**.
 Cada diagrama está en PNG (para documentos y presentaciones) y en SVG (editable).
 
+**Documento de entrega completo:** [Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf](Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf) (portada, requerimientos, modelo C4, casos de uso, DDD, arquitectura hexagonal, MVC, base de datos, Kanban, pantallas, pruebas e instalación).
+
 ## Modelo C4
 
 | Nivel | Diagrama |
