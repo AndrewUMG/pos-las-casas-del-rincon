@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2000" height="1430" viewBox="0 0 2000 1430"><defs>
+<marker id="arr" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#707070"/></marker>
+<marker id="tri" viewBox="0 0 20 20" refX="19" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L19,10 L1,19 Z" fill="#fff" stroke="#707070" stroke-width="2"/></marker>
+<marker id="dia" viewBox="0 0 24 14" refX="1" refY="7" markerWidth="24" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,7 L12,1 L23,7 L12,13 Z" fill="#707070"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><circle cx="330" cy="110" r="70" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<rect x="150.0" y="155" width="360" height="215" rx="62" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<text x="330" y="224.8" font-size="26" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Cajero</text>
+<text x="330" y="246.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Persona]</text>
+<text x="330" y="277.9" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Abre y cierra la caja, despacha</text>
+<text x="330" y="298.7" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">productos, cobra, factura y</text>
+<text x="330" y="319.5" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">procesa devoluciones.</text>
+<circle cx="1000" cy="110" r="70" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<rect x="820.0" y="155" width="360" height="215" rx="62" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<text x="1000" y="224.8" font-size="26" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Administrador</text>
+<text x="1000" y="246.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Persona]</text>
+<text x="1000" y="277.9" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Gestiona catálogos, inventario,</text>
+<text x="1000" y="298.7" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">compras, promociones, usuarios y</text>
+<text x="1000" y="319.5" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">reportes.</text>
+<circle cx="1670" cy="110" r="70" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<rect x="1490.0" y="155" width="360" height="215" rx="62" fill="#08427b" stroke="#073b6f" stroke-width="2"/>
+<text x="1670" y="224.8" font-size="26" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Cliente</text>
+<text x="1670" y="246.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Persona]</text>
+<text x="1670" y="277.9" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Residente de colonias</text>
+<text x="1670" y="298.7" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">residenciales que compra productos</text>
+<text x="1670" y="319.5" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">y recibe su factura con código QR.</text>
+<rect x="720" y="600" width="560" height="250" rx="6" fill="#1168bd" stroke="#0e5aa7" stroke-width="2"/>
+<text x="1000.0" y="684.1" font-size="30" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Sistema POS e Inventario</text>
+<text x="1000.0" y="706.6" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Sistema de Software]</text>
+<text x="1000.0" y="741.6" font-size="18" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Controla inventario, ventas, cobros, facturación con</text>
+<text x="1000.0" y="765.0" font-size="18" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">QR, devoluciones, promociones, caja y reportes del</text>
+<text x="1000.0" y="788.4" font-size="18" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">negocio.</text>
+<rect x="800" y="1060" width="400" height="210" rx="6" fill="#999999" stroke="#8a8a8a" stroke-width="2"/>
+<text x="1000.0" y="1120.8" font-size="26" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Core de Empresas de</text>
+<text x="1000.0" y="1151.4" font-size="26" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consumo Masivo</text>
+<text x="1000.0" y="1172.9" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Sistema de Software Existente]</text>
+<text x="1000.0" y="1206.2" font-size="17" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Core existente que provee productos,</text>
+<text x="1000.0" y="1228.3" font-size="17" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">familias, proveedores y precios.</text>
+<path d="M380,370 L800,600" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1000,370 L1000,600" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1580,370 L1200,600" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1000,850 L1000,1060" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<rect x="468.2" y="439.5" width="243.7" height="91.0" fill="#fff" opacity="0.95"/>
+<text x="590.0" y="460.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Registra ventas,</text>
+<text x="590.0" y="483.0" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">cobros, facturas,</text>
+<text x="590.0" y="505.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">devoluciones y caja en</text>
+<text x="590.0" y="524.0" font-size="14" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS]</text>
+<rect x="883.4" y="439.5" width="233.2" height="91.0" fill="#fff" opacity="0.95"/>
+<text x="1000.0" y="460.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Administra catálogos,</text>
+<text x="1000.0" y="483.0" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">inventario y consulta</text>
+<text x="1000.0" y="505.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">reportes en</text>
+<text x="1000.0" y="524.0" font-size="14" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS]</text>
+<rect x="1268.2" y="428.2" width="243.7" height="113.5" fill="#fff" opacity="0.95"/>
+<text x="1390.0" y="449.2" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Escanea con su celular</text>
+<text x="1390.0" y="471.8" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">el QR de la factura y</text>
+<text x="1390.0" y="494.2" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">consulta su promoción</text>
+<text x="1390.0" y="516.8" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">en</text>
+<text x="1390.0" y="535.2" font-size="14" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS]</text>
+<rect x="883.4" y="909.5" width="233.2" height="91.0" fill="#fff" opacity="0.95"/>
+<text x="1000.0" y="930.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consulta productos,</text>
+<text x="1000.0" y="953.0" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">proveedores y precios</text>
+<text x="1000.0" y="975.5" font-size="18" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">del</text>
+<text x="1000.0" y="994.0" font-size="14" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS/JSON]</text>
+<text x="40" y="520" font-size="16" font-weight="700" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Leyenda</text>
+<rect x="40" y="534" width="34" height="22" rx="4" fill="#08427b"/>
+<text x="84" y="551" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Persona</text>
+<rect x="40" y="564" width="34" height="22" rx="4" fill="#1168bd"/>
+<text x="84" y="581" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Sistema en alcance</text>
+<rect x="40" y="594" width="34" height="22" rx="4" fill="#999999"/>
+<text x="84" y="611" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Sistema existente</text>
+<text x="40" y="1340" font-size="34" font-weight="700" fill="#111" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Diagrama de Contexto del Sistema – Las Casas del Rincón Guatemalteco</text>
+<text x="40" y="1374" font-size="18" fill="#555" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Nivel 1 del modelo C4: el sistema POS e Inventario, sus usuarios y el Core existente con el que se integra.</text></svg>

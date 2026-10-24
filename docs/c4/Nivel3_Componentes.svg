@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2580" height="2120" viewBox="0 0 2580 2120"><defs>
+<marker id="arr" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#707070"/></marker>
+<marker id="tri" viewBox="0 0 20 20" refX="19" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L19,10 L1,19 Z" fill="#fff" stroke="#707070" stroke-width="2"/></marker>
+<marker id="dia" viewBox="0 0 24 14" refX="1" refY="7" markerWidth="24" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,7 L12,1 L23,7 L12,13 Z" fill="#707070"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><rect x="40" y="330" width="2040" height="1270" fill="none" stroke="#444" stroke-width="2" stroke-dasharray="10,8"/>
+<text x="54" y="1570" font-size="18" font-weight="700" fill="#444" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Aplicación Laravel</text>
+<text x="54" y="1589" font-size="14" fill="#444" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Contenedor: PHP 8 + Laravel – MVC + DDD + Arquitectura Hexagonal]</text>
+<rect x="60" y="640" width="1670" height="640" fill="#f6f9fd" stroke="#2c5f93" stroke-width="2" stroke-dasharray="6,6"/>
+<text x="74" y="1250" font-size="18" font-weight="700" fill="#2c5f93" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Módulos de dominio – Bounded Contexts (DDD)</text>
+<text x="74" y="1269" font-size="14" fill="#2c5f93" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Cada módulo: Controlador (C) + Servicios de aplicación + Entidades de dominio (M) + Puertos]</text>
+<rect x="420" y="40" width="380" height="220" rx="10" fill="#438dd5" stroke="#3c7fc0" stroke-width="2"/>
+<rect x="428" y="74" width="364" height="178" rx="6" fill="#4a95dd"/>
+<circle cx="442" cy="57" r="7" fill="#6aa9e6"/>
+<circle cx="466" cy="57" r="7" fill="#6aa9e6"/>
+<circle cx="490" cy="57" r="7" fill="#6aa9e6"/>
+<rect x="512" y="49" width="276" height="16" rx="8" fill="#6aa9e6"/>
+<text x="610.0" y="144.8" font-size="22" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Interfaz Web del POS</text>
+<text x="610.0" y="165.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Contenedor: Blade + Bootstrap + JS]</text>
+<text x="610.0" y="196.9" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Menú interactivo del POS.</text>
+<rect x="1460" y="40" width="380" height="220" rx="26" fill="#3c7fc0" stroke="#3c7fc0" stroke-width="2"/>
+<rect x="1494" y="50" width="312" height="200" rx="6" fill="#438dd5"/>
+<circle cx="1477" cy="150.0" r="6" fill="#6aa9e6"/>
+<rect x="1819" y="122.0" width="5" height="56" rx="2" fill="#6aa9e6"/>
+<text x="1650.0" y="131.8" font-size="22" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Vista de Promoción QR</text>
+<text x="1650.0" y="152.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Contenedor: Blade – vista móvil]</text>
+<text x="1650.0" y="183.9" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Muestra la promoción del QR.</text>
+<rect x="560" y="370" width="460" height="200" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="790.0" y="433.3" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Rutas y Middleware de Acceso</text>
+<text x="790.0" y="452.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Laravel Router + Middleware auth/rol]</text>
+<text x="790.0" y="481.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Recibe las peticiones, verifica la sesión del usuario</text>
+<text x="790.0" y="501.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">y los permisos de su rol y las envía al controlador</text>
+<text x="790.0" y="520.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">del módulo.</text>
+<rect x="1240" y="370" width="460" height="200" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1470.0" y="443.1" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Vistas Blade y Menú Interactivo</text>
+<text x="1470.0" y="462.0" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Blade Templates (V de MVC)]</text>
+<text x="1470.0" y="491.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Plantillas de cada pantalla: menú, despacho, cobro,</text>
+<text x="1470.0" y="511.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">factura con QR, caja, reportes y promoción.</text>
+<rect x="90" y="690" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="215.0" y="746.5" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Seguridad y</text>
+<text x="215.0" y="770.1" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Accesos</text>
+<text x="215.0" y="789.0" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="215.0" y="818.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Login contra la base de</text>
+<text x="215.0" y="838.1" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">datos, usuarios, roles y</text>
+<text x="215.0" y="857.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">permisos del menú.</text>
+<rect x="430" y="690" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="555.0" y="748.6" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Reportes</text>
+<text x="555.0" y="767.5" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="555.0" y="797.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Corte de caja,</text>
+<text x="555.0" y="816.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">devoluciones, clientes y</text>
+<text x="555.0" y="836.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">compras de productos para</text>
+<text x="555.0" y="855.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">existencias.</text>
+<rect x="770" y="690" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="895.0" y="746.5" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Inventario y</text>
+<text x="895.0" y="770.1" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Compras</text>
+<text x="895.0" y="789.0" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="895.0" y="818.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Compras a proveedores,</text>
+<text x="895.0" y="838.1" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">existencias por producto y</text>
+<text x="895.0" y="857.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">kardex de movimientos.</text>
+<rect x="1110" y="690" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1235.0" y="758.3" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Caja</text>
+<text x="1235.0" y="777.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="1235.0" y="806.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Apertura con monto inicial,</text>
+<text x="1235.0" y="826.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">movimientos y cierre de</text>
+<text x="1235.0" y="845.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">caja (corte).</text>
+<rect x="1450" y="690" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1575.0" y="758.3" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Catálogos</text>
+<text x="1575.0" y="777.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="1575.0" y="806.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Clientes, proveedores,</text>
+<text x="1575.0" y="826.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">productos por familia y</text>
+<text x="1575.0" y="845.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">precios.</text>
+<rect x="90" y="1000" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="215.0" y="1046.8" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Promociones y</text>
+<text x="215.0" y="1070.4" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Descuentos</text>
+<text x="215.0" y="1089.3" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="215.0" y="1118.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Producto gratis, vale de</text>
+<text x="215.0" y="1138.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">regalo, 2.º a mitad de</text>
+<text x="215.0" y="1157.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">precio, mayoreo y puntos;</text>
+<text x="215.0" y="1177.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">valida el QR.</text>
+<rect x="430" y="1000" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="555.0" y="1056.5" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Despacho (Punto de</text>
+<text x="555.0" y="1080.1" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Venta)</text>
+<text x="555.0" y="1099.0" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="555.0" y="1128.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Lectura por línea de</text>
+<text x="555.0" y="1148.1" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">producto, subtotal por</text>
+<text x="555.0" y="1167.6" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">línea y total de la compra.</text>
+<rect x="770" y="1000" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="895.0" y="1078.1" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Devoluciones</text>
+<text x="895.0" y="1097.0" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="895.0" y="1126.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Devolución de productos por</text>
+<text x="895.0" y="1146.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">daño o vencimiento.</text>
+<rect x="1110" y="1000" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1235.0" y="1068.3" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Cobros</text>
+<text x="1235.0" y="1087.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="1235.0" y="1116.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Pago en efectivo, tarjeta</text>
+<text x="1235.0" y="1136.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">de crédito o débito;</text>
+<text x="1235.0" y="1155.8" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">cálculo de cambio.</text>
+<rect x="1450" y="1000" width="250" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1575.0" y="1058.6" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Facturación</text>
+<text x="1575.0" y="1077.5" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Módulo Laravel]</text>
+<text x="1575.0" y="1107.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Factura con los datos del</text>
+<text x="1575.0" y="1126.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">cliente, detalle de</text>
+<text x="1575.0" y="1146.0" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">productos y código QR de</text>
+<text x="1575.0" y="1165.5" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">promoción.</text>
+<rect x="90" y="1340" width="1610" height="160" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="895.0" y="1402.8" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Repositorios – Adaptador de Persistencia</text>
+<text x="895.0" y="1421.7" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Eloquent ORM]</text>
+<text x="895.0" y="1451.3" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Implementan los puertos de salida (VentaRepository, ProductoRepository, CajaRepository, FacturaRepository, …) sobre PostgreSQL.</text>
+<rect x="1800" y="690" width="240" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1920.0" y="737.8" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Adaptador Core</text>
+<text x="1920.0" y="761.4" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consumo Masivo</text>
+<text x="1920.0" y="780.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: Laravel HTTP</text>
+<text x="1920.0" y="797.8" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Client]</text>
+<text x="1920.0" y="827.4" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Obtiene productos,</text>
+<text x="1920.0" y="846.9" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">proveedores y precios del</text>
+<text x="1920.0" y="866.4" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Core.</text>
+<rect x="1800" y="1000" width="240" height="210" rx="6" fill="#85bbf0" stroke="#78a8d8" stroke-width="2"/>
+<text x="1920.0" y="1047.8" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Generador de QR y</text>
+<text x="1920.0" y="1071.4" font-size="20" font-weight="700" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Factura</text>
+<text x="1920.0" y="1090.2" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Componente: simple-qrcode +</text>
+<text x="1920.0" y="1107.8" font-size="13" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">DomPDF]</text>
+<text x="1920.0" y="1137.4" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Crea el código QR con la</text>
+<text x="1920.0" y="1156.9" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">promoción y la factura</text>
+<text x="1920.0" y="1176.4" font-size="15" font-weight="400" fill="#0b2d4f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">imprimible.</text>
+<rect x="2200" y="710" width="320" height="170" rx="6" fill="#999999" stroke="#8a8a8a" stroke-width="2"/>
+<text x="2360.0" y="779.8" font-size="22" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Core de Empresas de</text>
+<text x="2360.0" y="805.8" font-size="22" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consumo Masivo</text>
+<text x="2360.0" y="826.3" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Sistema Existente]</text>
+<path d="M630,1726 A195.0,26 0 0 1 1020,1726 L1020,1894 A195.0,26 0 0 1 630,1894 Z" fill="#438dd5" stroke="#3c7fc0" stroke-width="2"/>
+<path d="M630,1726 A195.0,26 0 0 0 1020,1726" fill="none" stroke="#3c7fc0" stroke-width="2"/>
+<text x="825.0" y="1808.1" font-size="24" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Base de Datos</text>
+<text x="825.0" y="1829.1" font-size="14" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[Contenedor: PostgreSQL]</text>
+<text x="825.0" y="1860.6" font-size="16" font-weight="400" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Esquema relacional del negocio.</text>
+<path d="M2040,795 L2200,795" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M660,260 L760,370" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1480,260 L1000,370" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M560,470 L215,470 L215,690" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M790,570 L790,640" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1470,640 L1470,570" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M430,1105 L340,1105" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M640,1000 L820,900" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M935,1000 L935,900" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1235,1000 L1235,900" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1700,795 L1800,795" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1700,1105 L1800,1105" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M895,1280 L895,1340" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M825,1500 L825,1700" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<rect x="2075.6" y="774.5" width="88.9" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="2120.0" y="793.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Usa</text>
+<text x="2120.0" y="809.5" font-size="12" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS/JSON]</text>
+<rect x="628.8" y="284.5" width="162.5" height="61.0" fill="#fff" opacity="0.95"/>
+<text x="710.0" y="303.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Envía peticiones</text>
+<text x="710.0" y="323.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">HTTP/AJAX a</text>
+<text x="710.0" y="339.5" font-size="12" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS]</text>
+<rect x="1095.6" y="269.5" width="208.9" height="61.0" fill="#fff" opacity="0.95"/>
+<text x="1200" y="288.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consulta la promoción</text>
+<text x="1200" y="308.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">del QR en</text>
+<text x="1200" y="324.5" font-size="12" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[HTTPS]</text>
+<rect x="257.7" y="447.0" width="264.6" height="46.0" fill="#fff" opacity="0.95"/>
+<text x="390" y="466.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Autentica y valida permisos</text>
+<text x="390" y="486.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">con</text>
+<rect x="844.8" y="592.0" width="190.3" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="940" y="611.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Enruta peticiones a</text>
+<rect x="1495.6" y="582.0" width="208.9" height="46.0" fill="#fff" opacity="0.95"/>
+<text x="1600" y="601.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Renderizan respuestas</text>
+<text x="1600" y="621.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">con</text>
+<rect x="337.4" y="1084.5" width="95.2" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="385.0" y="1101.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Aplica</text>
+<text x="385.0" y="1119.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">descuentos</text>
+<rect x="673.3" y="929.5" width="103.3" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="725" y="946.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Descuenta</text>
+<text x="725" y="964.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">existencias</text>
+<rect x="883.3" y="929.5" width="103.3" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="935" y="946.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Ajusta</text>
+<text x="935" y="964.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">existencias</text>
+<rect x="1187.4" y="929.5" width="95.2" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="1235" y="946.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Registra</text>
+<text x="1235" y="964.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">ingreso en</text>
+<rect x="1710.5" y="774.5" width="79.0" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="1750.0" y="791.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Consulta</text>
+<text x="1750.0" y="809.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">con</text>
+<rect x="1706.5" y="1084.5" width="87.1" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="1750.0" y="1101.5" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Genera QR</text>
+<text x="1750.0" y="1119.0" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">y PDF con</text>
+<rect x="976.4" y="1297.0" width="487.3" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="1220" y="1316.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Persisten agregados mediante puertos de repositorio</text>
+<rect x="743.8" y="1629.5" width="162.5" height="41.0" fill="#fff" opacity="0.95"/>
+<text x="825" y="1648.5" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Lee y escribe en</text>
+<text x="825" y="1664.5" font-size="12" font-weight="400" fill="#6f6f6f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">[SQL – Eloquent]</text>
+<text x="1200" y="1730" font-size="16" font-weight="700" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Leyenda</text>
+<rect x="1200" y="1744" width="34" height="22" rx="4" fill="#438dd5"/>
+<text x="1244" y="1761" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Contenedor</text>
+<rect x="1200" y="1774" width="34" height="22" rx="4" fill="#85bbf0"/>
+<text x="1244" y="1791" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Componente</text>
+<rect x="1200" y="1804" width="34" height="22" rx="4" fill="#999999"/>
+<text x="1244" y="1821" font-size="15" fill="#333" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Sistema existente</text>
+<text x="40" y="2010" font-size="34" font-weight="700" fill="#111" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Diagrama de Componentes – Aplicación Laravel – Las Casas del Rincón Guatemalteco</text>
+<text x="40" y="2044" font-size="18" fill="#555" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Nivel 3 del modelo C4: módulos (bounded contexts) y adaptadores de la aplicación Laravel, organizados con MVC, DDD y Arquitectura Hexagonal.</text></svg>

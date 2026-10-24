@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1420" viewBox="0 0 1800 1420"><defs>
+<marker id="open" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L13,7 L1,13" fill="none" stroke="#555" stroke-width="2"/></marker>
+<marker id="gen" viewBox="0 0 22 22" refX="21" refY="11" markerWidth="22" markerHeight="22" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L21,11 L1,21 Z" fill="#fff" stroke="#2b2b2b" stroke-width="2"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><rect x="360" y="40" width="1080" height="1160" rx="14" fill="#fbfdff" stroke="#1168bd" stroke-width="3"/>
+<path d="M360,54 a14,14 0 0 1 14,-14 h1052 a14,14 0 0 1 14,14 v40 h-1080 Z" fill="#1168bd"/>
+<text x="382" y="76" font-size="21" font-weight="700" fill="#fff" font-family="'Segoe UI', Arial, sans-serif">Sistema POS e Inventario – Las Casas del Rincón Guatemalteco</text>
+<line x1="220" y1="290" x2="419.5" y2="267.2" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="290" x2="652.0" y2="362.0" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="545.8" y2="291.5" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="740.9" y2="425.1" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="689.3" y2="598.0" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="656.3" y2="712.7" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="604.9" y2="814.4" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="631.2" y2="933.8" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="850" x2="680.5" y2="1063.2" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="1580" y1="1080" x2="1374.1" y2="1085.6" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="735.0" y1="250.0" x2="1045.0" y2="250.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="848.1" y="238.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="890.0" y="254.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="925.0" y1="560.0" x2="1045.0" y2="560.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="943.1" y="548.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="985.0" y="564.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="873.9" y1="929.6" x2="1096.1" y2="870.4" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="943.1" y="888.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="985.0" y="904.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="1100.9" y1="1058.5" x2="869.1" y2="991.5" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="947.2" y="1013.0" width="75.6" height="22" rx="4" fill="#fff"/>
+<text x="985.0" y="1029.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«extend»</text>
+<circle cx="170" cy="238" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="260" x2="170" y2="318" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="282" x2="210" y2="282" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="318" x2="140" y2="370" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="318" x2="200" y2="370" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="400" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Cajero</text>
+<circle cx="170" cy="798" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="820" x2="170" y2="878" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="842" x2="210" y2="842" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="878" x2="140" y2="930" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="878" x2="200" y2="930" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="960" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Administrador</text>
+<circle cx="1630" cy="1028" r="22" fill="#fff" stroke="#6b6b6b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="1050" x2="1630" y2="1108" stroke="#6b6b6b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1590" y1="1072" x2="1670" y2="1072" stroke="#6b6b6b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="1108" x2="1600" y2="1160" stroke="#6b6b6b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="1108" x2="1660" y2="1160" stroke="#6b6b6b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="1630" y="1190" font-size="15" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«sistema existente»</text>
+<text x="1630" y="1214" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Core de Consumo</text>
+<text x="1630" y="1239" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Masivo</text>
+<ellipse cx="570" cy="250" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="570" y="256.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Iniciar sesión</text>
+<ellipse cx="790" cy="385" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="790" y="391.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Cerrar sesión</text>
+<ellipse cx="760" cy="560" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="760" y="555.1" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Gestionar usuarios y</text>
+<text x="760" y="577.5" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">roles</text>
+<ellipse cx="760" cy="680" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="760" y="686.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Gestionar clientes</text>
+<ellipse cx="760" cy="800" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="760" y="806.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Gestionar proveedores</text>
+<ellipse cx="760" cy="960" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="760" y="966.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Gestionar productos</text>
+<ellipse cx="760" cy="1100" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="760" y="1106.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Gestionar precios</text>
+<ellipse cx="1210" cy="250" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1210" y="245.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Validar credenciales en la</text>
+<text x="1210" y="266.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">base de datos</text>
+<ellipse cx="1210" cy="560" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1210" y="555.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Asignar permisos del menú</text>
+<text x="1210" y="576.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">por rol</text>
+<ellipse cx="1210" cy="840" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1210" y="835.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Clasificar producto por</text>
+<text x="1210" y="856.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">familia</text>
+<ellipse cx="1210" cy="1090" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1210" y="1085.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Consultar productos del</text>
+<text x="1210" y="1106.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Core</text>
+<line x1="1280" y1="1328" x2="1340" y2="1328" stroke="#2b2b2b" stroke-width="2"/>
+<text x="1352" y="1333" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Asociación actor – caso de uso</text>
+<line x1="1280" y1="1356" x2="1340" y2="1356" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<text x="1352" y="1361" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">«include» obligatorio  /  «extend» opcional</text>
+<line x1="1280" y1="1384" x2="1340" y2="1384" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<text x="1352" y="1389" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Generalización (tipo de)</text>
+<text x="40" y="1340" font-size="30" font-weight="700" fill="#111" font-family="'Segoe UI', Arial, sans-serif">CU-01 · Acceso de Usuarios y Catálogos</text>
+<text x="40" y="1372" font-size="17" fill="#555" font-family="'Segoe UI', Arial, sans-serif">Interfaz de acceso validada contra la base de datos y módulos de catálogos: clientes, proveedores, productos y precios.</text></svg>

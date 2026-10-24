@@ -7,6 +7,9 @@ colonias residenciales (Pastas, Productos Cárnicos, Embutidos, Lácteos, Golosi
 - **Arquitectura:** DDD + Arquitectura Hexagonal (puertos y adaptadores), tal como se documentó en los modelos C4,
   los diagramas de casos de uso y los diagramas de arquitectura hexagonal.
 
+**Documentación de diseño:** los diagramas C4, de casos de uso y de arquitectura hexagonal están en [`docs/`](docs/README.md).
+**Kanban:** <https://github.com/users/AndrewUMG/projects/1>
+
 ## Requisitos del documento y dónde se cumplen
 
 | # | Requisito | Módulo / pantalla |

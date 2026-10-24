@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2480" height="1680" viewBox="0 0 2480 1680"><defs>
+<marker id="arr" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto"><path d="M0,0 L12,6 L0,12 Z" fill="#707070"/></marker>
+<marker id="tri" viewBox="0 0 20 20" refX="19" refY="10" markerWidth="20" markerHeight="20" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L19,10 L1,19 Z" fill="#fff" stroke="#707070" stroke-width="2"/></marker>
+<marker id="dia" viewBox="0 0 24 14" refX="1" refY="7" markerWidth="24" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,7 L12,1 L23,7 L12,13 Z" fill="#707070"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><rect x="40" y="40" width="520" height="1000" rx="10" fill="#eaf2fb"/>
+<text x="58" y="74" font-size="20" font-weight="700" fill="#2c4a6b" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Infraestructura (Adaptadores)</text>
+<rect x="620" y="40" width="540" height="1000" rx="10" fill="#e4eef9"/>
+<text x="638" y="74" font-size="20" font-weight="700" fill="#2c4a6b" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Aplicación (Servicios y Puertos)</text>
+<rect x="1200" y="40" width="1240" height="1000" rx="10" fill="#e1e8f2"/>
+<text x="1218" y="74" font-size="20" font-weight="700" fill="#2c4a6b" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Dominio (Modelo DDD)</text>
+<rect x="90" y="130" width="420" height="158" rx="6" fill="#fff" stroke="#438dd5" stroke-width="2.5"/>
+<path d="M90,136 a6,6 0 0 1 6,-6 h408 a6,6 0 0 1 6,6 v56 h-420 Z" fill="#438dd5"/>
+<text x="300.0" y="152" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«controlador Laravel (C de MVC)»</text>
+<text x="300.0" y="178" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">VentaController</text>
+<line x1="90" y1="202" x2="510" y2="202" stroke="#438dd5" stroke-width="1.5"/>
+<text x="104" y="228" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ agregarLinea(Request)</text>
+<text x="104" y="252" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ finalizar(int $id)</text>
+<text x="104" y="276" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ show(int $id): View</text>
+<rect x="670" y="130" width="440" height="186" rx="6" fill="#fff" stroke="#1168bd" stroke-width="2.5"/>
+<path d="M670,136 a6,6 0 0 1 6,-6 h428 a6,6 0 0 1 6,6 v56 h-440 Z" fill="#1168bd"/>
+<text x="890.0" y="152" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«servicio de aplicación»</text>
+<text x="890.0" y="178" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">RegistrarVentaService</text>
+<line x1="670" y1="254" x2="1110" y2="254" stroke="#1168bd" stroke-width="1.5"/>
+<text x="684" y="218" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- ventas: VentaRepository</text>
+<text x="684" y="242" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- promociones: MotorPromociones</text>
+<text x="684" y="280" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ agregarProducto($ventaId, $codigo, $cant)</text>
+<text x="684" y="304" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ finalizar($ventaId): Venta</text>
+<rect x="670" y="700" width="440" height="134" rx="6" fill="#fff" stroke="#1168bd" stroke-width="2.5"/>
+<path d="M670,706 a6,6 0 0 1 6,-6 h428 a6,6 0 0 1 6,6 v56 h-440 Z" fill="#1168bd"/>
+<text x="890.0" y="722" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«interfaz · puerto de salida»</text>
+<text x="890.0" y="748" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-style="italic" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">VentaRepository</text>
+<line x1="670" y1="772" x2="1110" y2="772" stroke="#1168bd" stroke-width="1.5"/>
+<text x="684" y="798" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ guardar(Venta $venta): void</text>
+<text x="684" y="822" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ buscarPorId(int $id): Venta</text>
+<rect x="90" y="700" width="420" height="134" rx="6" fill="#fff" stroke="#438dd5" stroke-width="2.5"/>
+<path d="M90,706 a6,6 0 0 1 6,-6 h408 a6,6 0 0 1 6,6 v56 h-420 Z" fill="#438dd5"/>
+<text x="300.0" y="722" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«adaptador de salida · Eloquent»</text>
+<text x="300.0" y="748" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">EloquentVentaRepository</text>
+<line x1="90" y1="772" x2="510" y2="772" stroke="#438dd5" stroke-width="1.5"/>
+<text x="104" y="798" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ guardar(Venta $venta): void</text>
+<text x="104" y="822" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ buscarPorId(int $id): Venta</text>
+<rect x="1250" y="130" width="420" height="234" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M1250,136 a6,6 0 0 1 6,-6 h408 a6,6 0 0 1 6,6 v56 h-420 Z" fill="#08427b"/>
+<text x="1460.0" y="152" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«raíz de agregado»</text>
+<text x="1460.0" y="178" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Venta</text>
+<line x1="1250" y1="302" x2="1670" y2="302" stroke="#08427b" stroke-width="1.5"/>
+<text x="1264" y="218" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- id: int</text>
+<text x="1264" y="242" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- fecha: DateTime</text>
+<text x="1264" y="266" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- cajaId: int</text>
+<text x="1264" y="290" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- lineas: LineaVenta[]</text>
+<text x="1264" y="328" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ agregarLinea(Producto, int)</text>
+<text x="1264" y="352" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ calcularTotal(): float</text>
+<rect x="1250" y="640" width="420" height="210" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M1250,646 a6,6 0 0 1 6,-6 h408 a6,6 0 0 1 6,6 v56 h-420 Z" fill="#08427b"/>
+<text x="1460.0" y="662" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«entidad»</text>
+<text x="1460.0" y="688" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">LineaVenta</text>
+<line x1="1250" y1="812" x2="1670" y2="812" stroke="#08427b" stroke-width="1.5"/>
+<text x="1264" y="728" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- producto: Producto</text>
+<text x="1264" y="752" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- cantidad: int</text>
+<text x="1264" y="776" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- precioUnitario: float</text>
+<text x="1264" y="800" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- descuento: float</text>
+<text x="1264" y="838" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ subtotal(): float</text>
+<rect x="1860" y="130" width="400" height="206" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M1860,136 a6,6 0 0 1 6,-6 h388 a6,6 0 0 1 6,6 v56 h-400 Z" fill="#08427b"/>
+<text x="2060.0" y="152" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«entidad»</text>
+<text x="2060.0" y="178" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Producto</text>
+<line x1="1860" y1="326" x2="2260" y2="326" stroke="#08427b" stroke-width="1.5"/>
+<text x="1874" y="218" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- codigo: string</text>
+<text x="1874" y="242" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- nombre: string</text>
+<text x="1874" y="266" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- familia: string</text>
+<text x="1874" y="290" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- precio: float</text>
+<text x="1874" y="314" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">- existencia: int</text>
+<rect x="1860" y="600" width="400" height="110" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M1860,606 a6,6 0 0 1 6,-6 h388 a6,6 0 0 1 6,6 v56 h-400 Z" fill="#08427b"/>
+<text x="2060.0" y="622" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«interfaz»</text>
+<text x="2060.0" y="648" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-style="italic" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Promocion</text>
+<line x1="1860" y1="672" x2="2260" y2="672" stroke="#08427b" stroke-width="1.5"/>
+<text x="1874" y="698" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ aplicar(LineaVenta): float</text>
+<rect x="1760" y="860" width="300" height="110" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M1760,866 a6,6 0 0 1 6,-6 h288 a6,6 0 0 1 6,6 v56 h-300 Z" fill="#08427b"/>
+<text x="1910.0" y="882" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«regla»</text>
+<text x="1910.0" y="908" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">SegundoMitadPrecio</text>
+<line x1="1760" y1="932" x2="2060" y2="932" stroke="#08427b" stroke-width="1.5"/>
+<text x="1774" y="958" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ aplicar(LineaVenta)</text>
+<rect x="2100" y="860" width="300" height="110" rx="6" fill="#fff" stroke="#08427b" stroke-width="2.5"/>
+<path d="M2100,866 a6,6 0 0 1 6,-6 h288 a6,6 0 0 1 6,6 v56 h-300 Z" fill="#08427b"/>
+<text x="2250.0" y="882" font-size="14" fill="#dbe9f8" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">«regla»</text>
+<text x="2250.0" y="908" font-size="21" font-weight="700" fill="#fff" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">PrecioMayoreo</text>
+<line x1="2100" y1="932" x2="2400" y2="932" stroke="#08427b" stroke-width="1.5"/>
+<text x="2114" y="958" font-size="16" fill="#222" font-family="Consolas, 'Courier New', monospace">+ aplicar(LineaVenta)</text>
+<path d="M510,190 L670,190" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1110,190 L1250,190" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M890,316 L890,700" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M510,790 L670,790" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#tri)"/>
+<path d="M1460,364 L1460,640" fill="none" stroke="#707070" stroke-width="2.2" marker-start="url(#dia)"/>
+<path d="M1670,690 L1760,690 L1760,300 L1860,300" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1670,760 L1860,660" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#arr)"/>
+<path d="M1910,860 L1960,710" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#tri)"/>
+<path d="M2250,860 L2160,710" fill="none" stroke="#707070" stroke-width="2.2" stroke-dasharray="12,9" marker-end="url(#tri)"/>
+<rect x="569.1" y="177.0" width="41.8" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="590.0" y="196.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">usa</text>
+<rect x="1103.4" y="177.0" width="153.2" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="1180.0" y="196.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">crea / modifica</text>
+<rect x="827.3" y="495.0" width="125.4" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="890.0" y="514.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">usa (puerto)</text>
+<rect x="536.6" y="777.0" width="106.8" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="590.0" y="796.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">implementa</text>
+<rect x="1392.7" y="489.0" width="134.6" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="1460" y="508.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">contiene 1..*</text>
+<rect x="1706.6" y="457.0" width="106.8" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="1760" y="476.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">referencia</text>
+<rect x="1707.0" y="699.0" width="116.1" height="26.0" fill="#fff" opacity="0.95"/>
+<text x="1765" y="718.0" font-size="16" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">aplica 0..1</text>
+<rect x="1842.4" y="777.2" width="95.2" height="23.5" fill="#fff" opacity="0.95"/>
+<text x="1890" y="794.2" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">implementa</text>
+<rect x="2212.4" y="777.2" width="95.2" height="23.5" fill="#fff" opacity="0.95"/>
+<text x="2260" y="794.2" font-size="14" font-weight="700" fill="#5f5f5f" text-anchor="middle" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">implementa</text>
+<rect x="40" y="1080" width="1120" height="434" rx="10" fill="#1f2a37"/>
+<text x="64" y="1118" font-size="16" fill="#7fb77e" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">// app/Domain/Venta/Venta.php  (fragmento ilustrativo)</text>
+<text x="64" y="1142" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">class Venta</text>
+<text x="64" y="1166" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">{</text>
+<text x="64" y="1190" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    private array $lineas = [];</text>
+<text x="64" y="1238" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    public function agregarLinea(Producto $producto, int $cantidad): void</text>
+<text x="64" y="1262" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    {</text>
+<text x="64" y="1286" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">        if ($producto-&gt;existencia &lt; $cantidad) throw new StockInsuficiente();</text>
+<text x="64" y="1310" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">        $this-&gt;lineas[] = new LineaVenta($producto, $cantidad);</text>
+<text x="64" y="1334" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    }</text>
+<text x="64" y="1382" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    public function calcularTotal(): float</text>
+<text x="64" y="1406" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    {</text>
+<text x="64" y="1430" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">        return array_sum(array_map(fn($l) =&gt; $l-&gt;subtotal(), $this-&gt;lineas));</text>
+<text x="64" y="1454" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">    }</text>
+<text x="64" y="1478" font-size="16" fill="#e6edf3" xml:space="preserve" font-family="Consolas, 'Courier New', monospace">}</text>
+<text x="1220" y="1120" font-size="17" fill="#444" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Relaciones:  ──▷ usa / dependencia    - - -▷ (triángulo) implementa    ◆── composición</text>
+<text x="1220" y="1150" font-size="17" fill="#444" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Flujo: el controlador recibe la lectura del producto → el servicio carga la Venta,</text>
+<text x="1220" y="1180" font-size="17" fill="#444" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">aplica la promoción, recalcula subtotales/total y la guarda a través del puerto VentaRepository.</text>
+<text x="40" y="1580" font-size="34" font-weight="700" fill="#111" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Diagrama de Código – Componente Despacho (Punto de Venta)</text>
+<text x="40" y="1614" font-size="18" fill="#555" font-family="'Segoe UI', 'Open Sans', Arial, sans-serif">Nivel 4 del modelo C4: clases principales del módulo de despacho en Laravel con Arquitectura Hexagonal (representación simplificada).</text></svg>

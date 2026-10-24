@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1400" viewBox="0 0 1800 1400"><defs>
+<marker id="open" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L13,7 L1,13" fill="none" stroke="#555" stroke-width="2"/></marker>
+<marker id="gen" viewBox="0 0 22 22" refX="21" refY="11" markerWidth="22" markerHeight="22" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L21,11 L1,21 Z" fill="#fff" stroke="#2b2b2b" stroke-width="2"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><rect x="360" y="40" width="1080" height="1140" rx="14" fill="#fbfdff" stroke="#1168bd" stroke-width="3"/>
+<path d="M360,54 a14,14 0 0 1 14,-14 h1052 a14,14 0 0 1 14,14 v40 h-1080 Z" fill="#1168bd"/>
+<text x="382" y="76" font-size="21" font-weight="700" fill="#fff" font-family="'Segoe UI', Arial, sans-serif">Sistema POS e Inventario – Las Casas del Rincón Guatemalteco</text>
+<line x1="1086.1" y1="164.2" x2="767.3" y2="294.4" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1040.9" y1="256.3" x2="808.7" y2="303.7" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="995.0" y1="330.0" x2="845.0" y2="330.0" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1040.9" y1="403.7" x2="808.7" y2="356.3" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1086.1" y1="495.8" x2="767.3" y2="365.6" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="220" y1="320" x2="515.6" y2="326.4" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="1580" y1="730" x2="1334.2" y2="736.0" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="920" x2="517.4" y2="907.1" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="920" x2="564.8" y2="1009.9" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="1005.0" y1="740.0" x2="845.0" y2="740.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="883.1" y="728.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="925.0" y="744.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="1170.0" y1="782.0" x2="1170.0" y2="860.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="1128.1" y="809.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="1170.0" y="825.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="680.0" y1="858.0" x2="680.0" y2="782.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="638.1" y="808.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="680.0" y="824.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="845.0" y1="1040.0" x2="995.0" y2="1040.0" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="878.1" y="1028.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="920.0" y="1044.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<circle cx="170" cy="268" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="290" x2="170" y2="348" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="312" x2="210" y2="312" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="348" x2="140" y2="400" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="348" x2="200" y2="400" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="430" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Administrador</text>
+<circle cx="170" cy="868" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="890" x2="170" y2="948" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="912" x2="210" y2="912" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="948" x2="140" y2="1000" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="948" x2="200" y2="1000" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="1030" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Cajero</text>
+<circle cx="1630" cy="678" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="700" x2="1630" y2="758" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1590" y1="722" x2="1670" y2="722" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="758" x2="1600" y2="810" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="1630" y1="758" x2="1660" y2="810" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="1630" y="840" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Cliente</text>
+<ellipse cx="680" cy="330" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="680" y="336.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Configurar promoción</text>
+<ellipse cx="1170" cy="130" rx="175.0" ry="39.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="135.9" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Producto gratuito</text>
+<ellipse cx="1170" cy="230" rx="175.0" ry="39.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="235.9" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Vale de regalo</text>
+<ellipse cx="1170" cy="330" rx="175.0" ry="39.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="325.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Segundo producto a mitad de</text>
+<text x="1170" y="346.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">precio</text>
+<ellipse cx="1170" cy="430" rx="175.0" ry="39.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="435.9" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Compra por mayoreo</text>
+<ellipse cx="1170" cy="530" rx="175.0" ry="39.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="536.0" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Puntos por producto</text>
+<ellipse cx="1170" cy="740" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="1170" y="735.1" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Leer el QR de la factura</text>
+<text x="1170" y="757.5" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">con el celular</text>
+<ellipse cx="680" cy="740" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="680" y="746.0" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Validar código QR</text>
+<ellipse cx="680" cy="900" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="680" y="895.1" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Canjear promoción en la</text>
+<text x="680" y="917.5" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">compra</text>
+<ellipse cx="680" cy="1040" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="680" y="1046.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Canjear puntos acumulados</text>
+<ellipse cx="1170" cy="900" rx="175.0" ry="40.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="895.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Ver tipo de promoción</text>
+<text x="1170" y="916.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">obtenida</text>
+<ellipse cx="1170" cy="1040" rx="175.0" ry="40.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1170" y="1035.4" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Consultar saldo de puntos</text>
+<text x="1170" y="1056.5" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">del cliente</text>
+<line x1="1280" y1="1308" x2="1340" y2="1308" stroke="#2b2b2b" stroke-width="2"/>
+<text x="1352" y="1313" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Asociación actor – caso de uso</text>
+<line x1="1280" y1="1336" x2="1340" y2="1336" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<text x="1352" y="1341" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">«include» obligatorio  /  «extend» opcional</text>
+<line x1="1280" y1="1364" x2="1340" y2="1364" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<text x="1352" y="1369" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Generalización (tipo de)</text>
+<text x="40" y="1320" font-size="30" font-weight="700" fill="#111" font-family="'Segoe UI', Arial, sans-serif">CU-04 · Promociones y Lectura del Código QR</text>
+<text x="40" y="1352" font-size="17" fill="#555" font-family="'Segoe UI', Arial, sans-serif">Configuración de promociones, lectura del QR de la factura desde el celular y canje de descuentos o puntos.</text></svg>

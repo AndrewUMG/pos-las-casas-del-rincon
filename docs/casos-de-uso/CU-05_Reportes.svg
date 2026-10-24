@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1120" viewBox="0 0 1800 1120"><defs>
+<marker id="open" viewBox="0 0 14 14" refX="13" refY="7" markerWidth="14" markerHeight="14" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L13,7 L1,13" fill="none" stroke="#555" stroke-width="2"/></marker>
+<marker id="gen" viewBox="0 0 22 22" refX="21" refY="11" markerWidth="22" markerHeight="22" markerUnits="userSpaceOnUse" orient="auto"><path d="M1,1 L21,11 L1,21 Z" fill="#fff" stroke="#2b2b2b" stroke-width="2"/></marker>
+</defs><rect width="100%" height="100%" fill="#fff"/><rect x="360" y="40" width="1080" height="860" rx="14" fill="#fbfdff" stroke="#1168bd" stroke-width="3"/>
+<path d="M360,54 a14,14 0 0 1 14,-14 h1052 a14,14 0 0 1 14,14 v40 h-1080 Z" fill="#1168bd"/>
+<text x="382" y="76" font-size="21" font-weight="700" fill="#fff" font-family="'Segoe UI', Arial, sans-serif">Sistema POS e Inventario – Las Casas del Rincón Guatemalteco</text>
+<line x1="1110.1" y1="213.6" x2="709.8" y2="431.9" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1056.2" y1="364.1" x2="756.7" y2="440.3" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1001.9" y1="483.2" x2="803.3" y2="475.9" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="1073.9" y1="612.0" x2="741.3" y2="503.2" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<line x1="220" y1="470" x2="475.0" y2="470.0" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="220" y1="200" x2="1001.4" y2="175.8" stroke="#2b2b2b" stroke-width="2"/>
+<line x1="628.4" y1="511.9" x2="571.6" y2="718.1" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="558.1" y="603.0" width="83.8" height="22" rx="4" fill="#fff"/>
+<text x="600.0" y="619.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«include»</text>
+<line x1="955.9" y1="759.5" x2="684.1" y2="510.5" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<rect x="782.2" y="623.0" width="75.6" height="22" rx="4" fill="#fff"/>
+<text x="820.0" y="639.0" font-size="15" font-style="italic" fill="#555" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">«extend»</text>
+<circle cx="170" cy="148" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="170" x2="170" y2="228" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="192" x2="210" y2="192" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="228" x2="140" y2="280" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="228" x2="200" y2="280" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="310" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Cajero</text>
+<circle cx="170" cy="418" r="22" fill="#fff" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="440" x2="170" y2="498" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="130" y1="462" x2="210" y2="462" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="498" x2="140" y2="550" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<line x1="170" y1="498" x2="200" y2="550" stroke="#08427b" stroke-width="4" stroke-linecap="round" fill="none"/>
+<text x="170" y="580" font-size="21" font-weight="600" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Administrador</text>
+<ellipse cx="640" cy="470" rx="165.0" ry="42.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="640" y="476.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Generar reporte</text>
+<ellipse cx="1190" cy="170" rx="190.0" ry="48.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="1190" y="165.1" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Reporte de cierre del día</text>
+<text x="1190" y="187.5" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">(corte de caja)</text>
+<ellipse cx="1190" cy="330" rx="190.0" ry="48.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="1190" y="336.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Reporte de devoluciones</text>
+<ellipse cx="1190" cy="490" rx="190.0" ry="48.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="1190" y="496.3" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Reporte de clientes</text>
+<ellipse cx="1190" cy="650" rx="190.0" ry="48.0" fill="#dbe9f8" stroke="#1168bd" stroke-width="2.5"/>
+<text x="1190" y="645.1" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Reporte de compras de</text>
+<text x="1190" y="667.5" font-size="18" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">productos para existencias</text>
+<ellipse cx="560" cy="760" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="560" y="766.0" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Filtrar por rango de fechas</text>
+<ellipse cx="1000" cy="800" rx="165.0" ry="42.0" fill="#f4f8fd" stroke="#6a9bd0" stroke-width="2.5"/>
+<text x="1000" y="806.0" font-size="17" fill="#1d2b3a" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif">Imprimir o exportar a PDF</text>
+<line x1="1280" y1="1028" x2="1340" y2="1028" stroke="#2b2b2b" stroke-width="2"/>
+<text x="1352" y="1033" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Asociación actor – caso de uso</text>
+<line x1="1280" y1="1056" x2="1340" y2="1056" stroke="#555" stroke-width="2" stroke-dasharray="9,7" marker-end="url(#open)"/>
+<text x="1352" y="1061" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">«include» obligatorio  /  «extend» opcional</text>
+<line x1="1280" y1="1084" x2="1340" y2="1084" stroke="#2b2b2b" stroke-width="2" marker-end="url(#gen)"/>
+<text x="1352" y="1089" font-size="15" fill="#444" font-family="'Segoe UI', Arial, sans-serif">Generalización (tipo de)</text>
+<text x="40" y="1040" font-size="30" font-weight="700" fill="#111" font-family="'Segoe UI', Arial, sans-serif">CU-05 · Reportes</text>
+<text x="40" y="1072" font-size="17" fill="#555" font-family="'Segoe UI', Arial, sans-serif">Cierre del día (corte de caja), devoluciones, clientes y compras de productos para existencias.</text></svg>
