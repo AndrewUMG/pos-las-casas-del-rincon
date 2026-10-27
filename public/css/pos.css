@@ -1,39 +1,146 @@
-/* Sistema POS – Las Casas del Rincón Guatemalteco */
+/* Sistema POS – Las Casas del Rincón Guatemalteco
+   Identidad "Jade & Maíz": estructura modular familiar, paleta y tipografía propias. */
 :root {
-    --pos-primario: #714B67;
-    --pos-primario-oscuro: #5a3b52;
-    --pos-acento: #017E84;
+    --jade-700: #0f4a3d; --jade-800: #0c3b31; --jade-900: #08281f;
+    --jade-600: #14705c; --jade-500: #1a8a70; --jade-100: #e3f3ee; --jade-200: #a9d8cb;
+    --maiz-500: #e8a317; --maiz-100: #fff4d9; --maiz-700: #8f5f00;
+    --pos-primario: var(--jade-600);
+    --pos-primario-oscuro: var(--jade-700);
+    --pos-acento: var(--maiz-500);
+    --tx: #1c1d1a; --tx-2: #575850; --tx-3: #7b7c72;
+    --borde: #deded8; --borde-fuerte: #c9c9c0;
+    --fondo: #f6f6f2; --sup: #fff; --sup-2: #fafaf7; --sup-3: #ebebe5;
+    --ok-bg: #e6f5ea; --ok-fg: #146b34; --aviso-bg: #ffeab8; --aviso-fg: #8f5f00;
+    --err-bg: #fbeaea; --err-fg: #9b2222; --info-bg: #e8f0fd; --info-fg: #1d4fa3;
+
+    --bs-body-font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --bs-body-color: var(--tx);
+    --bs-body-bg: var(--fondo);
+    --bs-primary: var(--jade-600);
+    --bs-primary-rgb: 20, 112, 92;
+    --bs-link-color: var(--jade-600);
+    --bs-link-hover-color: var(--jade-700);
+    --bs-border-color: var(--borde);
+    --bs-border-radius: .625rem;
+    --bs-secondary-color: var(--tx-2);
 }
 
-body { background: #f3f4f6; }
+body { background: var(--fondo); font-size: .9375rem; }
+h1, h2, h3, h4, h5, .total-venta { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; }
+code, .codigo { font-family: 'JetBrains Mono', Consolas, monospace; }
 
-.menu-pos { background: var(--pos-primario); }
-.menu-pos .nav-link { color: rgba(255, 255, 255, .85); }
-.menu-pos .nav-link:hover, .menu-pos .nav-link.active { color: #fff; background: var(--pos-primario-oscuro); border-radius: .375rem; }
+/* ---------- Barra de módulos ---------- */
+.menu-pos { background: var(--jade-800); padding: 0; min-height: 56px; }
+.menu-pos .navbar-brand { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1rem; line-height: 1.1; }
+.menu-pos .navbar-brand i { color: var(--maiz-500); font-size: 1.35rem; }
+.menu-pos .navbar-brand small { display: block; font-weight: 400; font-size: .68rem; color: rgba(255, 255, 255, .65); }
+.menu-pos .nav-link { color: rgba(255, 255, 255, .82); font-weight: 500; font-size: .875rem; padding: 1rem .8rem; border-bottom: 3px solid transparent; border-radius: 0; }
+.menu-pos .nav-link:hover { color: #fff; background: var(--jade-700); }
+.menu-pos .nav-link.active, .menu-pos .nav-link.show { color: #fff; background: var(--jade-900); border-bottom-color: var(--maiz-500); }
+.menu-pos .dropdown-menu { border: 1px solid var(--borde); border-radius: .75rem; box-shadow: 0 8px 24px rgba(8, 40, 31, .16); padding: .4rem; margin-top: 0; }
+.menu-pos .dropdown-item { border-radius: .5rem; padding: .5rem .75rem; font-size: .875rem; }
+.menu-pos .dropdown-item i { color: var(--tx-3); margin-right: .35rem; }
+.menu-pos .dropdown-item:hover, .menu-pos .dropdown-item:focus { background: var(--jade-100); color: var(--jade-700); }
+.menu-pos .dropdown-item:hover i { color: var(--jade-600); }
+.estado-caja { display: inline-flex; align-items: center; gap: .45rem; padding: .3rem .8rem; border-radius: 999px; font-size: .78rem; font-weight: 600; color: #fff; background: var(--jade-700); text-decoration: none; }
+.estado-caja::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: var(--maiz-500); }
+.estado-caja:hover { color: #fff; background: var(--jade-900); }
+.avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--maiz-500); color: var(--tx); font-weight: 700; display: inline-flex; align-items: center; justify-content: center; font-size: .85rem; }
 
-.btn-pos { background: var(--pos-primario); border-color: var(--pos-primario); color: #fff; }
-.btn-pos:hover { background: var(--pos-primario-oscuro); border-color: var(--pos-primario-oscuro); color: #fff; }
-.text-pos { color: var(--pos-primario); }
+/* ---------- Panel de control (migas + título) ---------- */
+.panel-control { background: var(--sup); border-bottom: 1px solid var(--borde); padding: .65rem 1.5rem; }
+.migas { display: flex; align-items: center; gap: .35rem; font-size: .8rem; color: var(--tx-3); margin: 0; }
+.migas a { color: var(--tx-3); text-decoration: none; }
+.migas a:hover { color: var(--jade-600); }
+.migas i { font-size: .65rem; }
+.migas span:last-child { color: var(--tx-2); }
+.titulo-pagina { font-weight: 700; color: var(--tx); letter-spacing: -.01em; }
+.titulo-pagina i { color: var(--jade-600); margin-right: .25rem; }
 
-.card { border: 0; box-shadow: 0 1px 3px rgba(0, 0, 0, .08); }
-.card-header { background: #fff; font-weight: 600; }
-.titulo-pagina { font-weight: 700; color: #1f2937; }
-.table thead th { font-size: .8rem; text-transform: uppercase; letter-spacing: .03em; color: #6b7280; }
+/* ---------- Botones ---------- */
+.btn { font-weight: 600; border-radius: .625rem; }
+.btn-pos, .btn-primary { background: var(--jade-600); border-color: var(--jade-600); color: #fff; }
+.btn-pos:hover, .btn-primary:hover, .btn-pos:focus-visible { background: var(--jade-700); border-color: var(--jade-700); color: #fff; }
+.btn-success { background: #1a8a4a; border-color: #1a8a4a; }
+.btn-success:hover { background: #146b34; border-color: #146b34; }
+.btn-outline-secondary { color: var(--tx); border-color: var(--borde-fuerte); background: var(--sup); }
+.btn-outline-secondary:hover { background: var(--sup-3); border-color: var(--borde-fuerte); color: var(--tx); }
+.btn-outline-danger { background: var(--sup); }
+.btn-lg { padding: .75rem 1.5rem; border-radius: .875rem; }
+.btn:focus-visible, .form-control:focus, .form-select:focus { box-shadow: 0 0 0 .22rem rgba(26, 138, 112, .22); border-color: var(--jade-500); }
+.text-pos { color: var(--jade-600); }
 
-/* Despacho */
-.lector { font-size: 1.4rem; font-family: Consolas, monospace; }
-.total-venta { font-size: 2.6rem; font-weight: 800; color: var(--pos-primario); line-height: 1; }
+/* ---------- Tarjetas, formularios, tablas ---------- */
+.card { border: 1px solid var(--borde); border-radius: .875rem; box-shadow: 0 1px 2px rgba(28, 29, 26, .04); background: var(--sup); }
+.card-header { background: var(--sup); font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; border-bottom: 1px solid var(--borde); padding: .9rem 1.25rem; }
+.card-body { padding: 1.25rem; }
+.form-control, .form-select { border-color: var(--borde-fuerte); border-radius: .625rem; }
+.form-label { font-weight: 500; font-size: .8125rem; color: var(--tx-2); margin-bottom: .3rem; }
+.table { --bs-table-hover-bg: var(--jade-100); }
+.table thead th { font-size: .68rem; text-transform: uppercase; letter-spacing: .06em; font-weight: 600; color: var(--tx-3); background: var(--sup-2); border-bottom: 1px solid var(--borde); padding: .7rem 1rem; }
+.table td { padding: .8rem 1rem; border-color: var(--borde); }
+.card > .table-responsive > .table, .card > .table { margin-bottom: 0; }
+.list-group-item { border-color: var(--borde); }
+
+/* Insignias y avisos con tonos suaves */
+.badge { font-weight: 600; border-radius: 999px; padding: .38em .7em; }
+.badge.bg-success { background: var(--ok-bg) !important; color: var(--ok-fg) !important; }
+.badge.bg-warning { background: var(--aviso-bg) !important; color: var(--aviso-fg) !important; }
+.badge.bg-danger { background: var(--err-bg) !important; color: var(--err-fg) !important; }
+.badge.bg-info { background: var(--info-bg) !important; color: var(--info-fg) !important; }
+.badge.bg-secondary { background: var(--sup-3) !important; color: var(--tx-2) !important; }
+.badge.bg-light { background: rgba(255, 255, 255, .16) !important; color: #fff !important; }
+.badge.bg-primary { background: var(--jade-100) !important; color: var(--jade-700) !important; }
+.alert { border: 0; border-radius: .75rem; font-weight: 500; }
+.alert-success { background: var(--ok-bg); color: var(--ok-fg); }
+.alert-danger { background: var(--err-bg); color: var(--err-fg); }
+.alert-warning { background: var(--aviso-bg); color: var(--aviso-fg); }
+.alert-info { background: var(--info-bg); color: var(--info-fg); }
+.text-success { color: var(--ok-fg) !important; }
+.text-danger { color: var(--err-fg) !important; }
+.text-muted { color: var(--tx-3) !important; }
+
+/* ---------- Indicadores ---------- */
+.kpi { display: flex; flex-direction: column; gap: .75rem; }
+.kpi-icono { width: 40px; height: 40px; border-radius: .625rem; display: inline-flex; align-items: center; justify-content: center; font-size: 1.15rem; background: var(--jade-100); color: var(--jade-600); }
+.kpi-icono.maiz { background: var(--maiz-100); color: var(--maiz-700); }
+.kpi-icono.gris { background: var(--sup-3); color: var(--tx-2); }
+.kpi-icono.rojo { background: var(--err-bg); color: var(--err-fg); }
+.kpi-valor { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.75rem; line-height: 1.1; }
+
+/* ---------- Despacho y cobro ---------- */
+.lector { font-size: 1.4rem; font-family: 'JetBrains Mono', Consolas, monospace; }
+.total-venta { font-size: 2.75rem; font-weight: 800; color: var(--tx); line-height: 1; letter-spacing: -.02em; }
 .tabla-despacho { min-height: 320px; }
-.promo { font-size: .75rem; }
+.promo { font-size: .75rem; color: var(--ok-fg); font-weight: 500; }
+.opcion-pago { display: flex; align-items: center; gap: .75rem; padding: 1rem; border: 1px solid var(--borde-fuerte); border-radius: .875rem; cursor: pointer; background: var(--sup); height: 100%; }
+.opcion-pago i { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border-radius: .625rem; background: var(--sup-3); color: var(--tx-2); font-size: 1.2rem; }
+.btn-check:checked + .opcion-pago { background: var(--jade-100); border: 2px solid var(--jade-500); }
+.btn-check:checked + .opcion-pago i { background: var(--jade-600); color: #fff; }
+.btn-check:focus-visible + .opcion-pago { box-shadow: 0 0 0 .22rem rgba(26, 138, 112, .22); }
+.monto-grande { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.75rem; height: 72px; border-width: 2px; border-radius: .875rem; }
+.cambio-caja { display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.25rem; border-radius: .875rem; background: var(--ok-bg); color: var(--ok-fg); font-weight: 600; }
+.cambio-caja.falta { background: var(--err-bg); color: var(--err-fg); }
+.cambio-caja strong { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 2rem; }
+.teclado { display: grid; grid-template-columns: repeat(3, 76px); gap: .5rem; }
+.teclado button { height: 60px; border: 1px solid var(--borde-fuerte); background: var(--sup); border-radius: .875rem; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 1.25rem; }
+.teclado button:hover { background: var(--jade-100); }
+.teclado button:active { background: var(--jade-200); }
+.teclado button.borrar { background: var(--sup-3); }
+.chip { border: 1px solid var(--borde-fuerte); background: var(--sup); border-radius: 999px; padding: .3rem .9rem; font-size: .8125rem; font-weight: 500; color: var(--tx-2); }
+.chip:hover, .chip.activo { background: var(--jade-600); border-color: var(--jade-600); color: #fff; }
 
-/* Tarjetas de módulo en el inicio */
-.modulo { transition: transform .1s; }
-.modulo:hover { transform: translateY(-2px); }
-.modulo i { font-size: 2rem; color: var(--pos-primario); }
+/* Módulos del inicio */
+.modulo { transition: transform .12s, box-shadow .12s, border-color .12s; }
+.modulo:hover { transform: translateY(-2px); border-color: var(--jade-200); box-shadow: 0 6px 18px rgba(15, 74, 61, .10); }
+.modulo i { font-size: 1.5rem; color: var(--jade-600); background: var(--jade-100); width: 48px; height: 48px; display: inline-flex; align-items: center; justify-content: center; border-radius: .75rem; }
 
 /* Factura */
 .factura { max-width: 820px; margin: 0 auto; background: #fff; }
 .factura .qr svg { width: 170px; height: 170px; }
+
+/* Acceso */
+.pagina-acceso { min-height: 100vh; display: flex; align-items: center; background: radial-gradient(circle at 20% 10%, var(--jade-600), var(--jade-800) 55%, var(--jade-900)); }
 
 @media print {
     body { background: #fff; }

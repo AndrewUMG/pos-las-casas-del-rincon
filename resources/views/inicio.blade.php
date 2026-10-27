@@ -22,25 +22,33 @@
 </div>
 
 @if ($puede('caja'))
-    <div class="card mb-4">
-        <div class="card-body d-flex flex-wrap align-items-center gap-4">
-            @if ($caja)
-                <div><span class="badge bg-success fs-6"><i class="bi bi-unlock"></i> Caja abierta</span></div>
-                <div><div class="text-muted small">Apertura</div><strong>{{ $caja->fechaApertura->format('d/m/Y H:i') }}</strong></div>
-                <div><div class="text-muted small">Monto inicial</div><strong>{{ q($caja->montoInicial) }}</strong></div>
-                <div><div class="text-muted small">Ventas del turno</div><strong>{{ q($resumen['total_ventas']) }}</strong></div>
-                <div><div class="text-muted small">Efectivo esperado</div><strong>{{ q($resumen['efectivo_esperado']) }}</strong></div>
-                <div class="ms-auto d-flex gap-2">
-                    <a href="{{ route('pos.despacho') }}" class="btn btn-pos"><i class="bi bi-upc-scan"></i> {{ $ventaEnProceso ? 'Continuar venta' : 'Ir al despacho' }}</a>
-                    <a href="{{ route('caja.index') }}" class="btn btn-outline-secondary">Corte de caja</a>
+    @if ($caja)
+        <div class="row g-3 mb-4">
+            @foreach ([
+                ['bi-unlock', 'gris', 'Monto inicial', q($caja->montoInicial), 'Abierta desde las '.$caja->fechaApertura->format('G:i')],
+                ['bi-cash-stack', '', 'Ventas del turno', q($resumen['total_ventas']), 'Todos los métodos de pago'],
+                ['bi-lock', 'maiz', 'Efectivo esperado', q($resumen['efectivo_esperado']), 'Inicial + ventas en efectivo − devoluciones'],
+            ] as [$icono, $tono, $etiqueta, $valor, $sub])
+                <div class="col-md-6 col-xl-3"><div class="card h-100"><div class="card-body kpi">
+                    <div class="d-flex align-items-center gap-2"><span class="kpi-icono {{ $tono }}"><i class="bi {{ $icono }}"></i></span><span class="text-muted fw-medium">{{ $etiqueta }}</span></div>
+                    <div class="kpi-valor">{{ $valor }}</div><div class="small text-muted">{{ $sub }}</div>
+                </div></div></div>
+            @endforeach
+            <div class="col-md-6 col-xl-3"><div class="card h-100 border-0" style="background:var(--jade-800)"><div class="card-body d-flex flex-column justify-content-between gap-3">
+                <div class="text-white fw-semibold">{{ $ventaEnProceso ? 'Hay una venta en proceso' : 'Todo listo para vender' }}</div>
+                <div class="d-flex gap-2">
+                    <a href="{{ route('pos.despacho') }}" class="btn btn-sm" style="background:var(--maiz-500);color:var(--tx)"><i class="bi bi-upc-scan"></i> {{ $ventaEnProceso ? 'Continuar venta' : 'Ir al despacho' }}</a>
+                    <a href="{{ route('caja.index') }}" class="btn btn-sm btn-outline-light">Corte de caja</a>
                 </div>
-            @else
-                <div><span class="badge bg-secondary fs-6"><i class="bi bi-lock"></i> Caja cerrada</span></div>
-                <div class="text-muted">Abra la caja indicando el monto inicial para empezar a vender.</div>
-                <a href="{{ route('caja.index') }}" class="btn btn-pos ms-auto"><i class="bi bi-unlock"></i> Apertura de caja</a>
-            @endif
+            </div></div></div>
         </div>
-    </div>
+    @else
+        <div class="card mb-4"><div class="card-body d-flex flex-wrap align-items-center gap-3">
+            <span class="kpi-icono gris"><i class="bi bi-lock"></i></span>
+            <div><div class="fw-semibold">Caja cerrada</div><div class="text-muted">Abra la caja indicando el monto inicial para empezar a vender.</div></div>
+            <a href="{{ route('caja.index') }}" class="btn btn-pos ms-auto"><i class="bi bi-unlock"></i> Apertura de caja</a>
+        </div></div>
+    @endif
 @endif
 
 <div class="row g-3">

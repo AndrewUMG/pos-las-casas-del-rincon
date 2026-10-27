@@ -36,24 +36,43 @@
                     <div class="card-body">
                         <form method="post" action="{{ route('pos.cobrar', $venta['id']) }}" id="form-cobro">
                             @csrf
-                            <div class="btn-group w-100 mb-3" role="group">
+                            <div class="row g-2 mb-4">
                                 @foreach ($metodos as $m)
-                                    <input type="radio" class="btn-check" name="metodo" id="m-{{ $m->value }}" value="{{ $m->value }}" @checked(old('metodo', 'efectivo') === $m->value)>
-                                    <label class="btn btn-outline-secondary" for="m-{{ $m->value }}">
-                                        <i class="bi {{ $m->value === 'efectivo' ? 'bi-cash' : 'bi-credit-card' }}"></i> {{ $m->etiqueta() }}
-                                    </label>
+                                    <div class="col">
+                                        <input type="radio" class="btn-check" name="metodo" id="m-{{ $m->value }}" value="{{ $m->value }}" @checked(old('metodo', 'efectivo') === $m->value)>
+                                        <label class="opcion-pago" for="m-{{ $m->value }}">
+                                            <i class="bi {{ $m->value === 'efectivo' ? 'bi-cash' : 'bi-credit-card' }}"></i>
+                                            <span class="fw-semibold">{{ $m->etiqueta() }}</span>
+                                        </label>
+                                    </div>
                                 @endforeach
                             </div>
                             <div id="efectivo">
-                                <label class="form-label">Monto recibido</label>
-                                <input type="number" step="0.01" min="0" name="monto_recibido" id="recibido" class="form-control form-control-lg" value="{{ old('monto_recibido') }}" autofocus>
-                                <div class="mt-3 d-flex justify-content-between fs-5"><span>Cambio</span><strong id="cambio">Q 0.00</strong></div>
+                                <div class="d-flex gap-4 flex-wrap">
+                                    <div class="flex-grow-1" style="min-width:240px">
+                                        <label class="form-label">Monto recibido</label>
+                                        <input type="number" step="0.01" min="0" name="monto_recibido" id="recibido" class="form-control monto-grande" value="{{ old('monto_recibido') }}" autofocus>
+                                        <div class="d-flex flex-wrap gap-2 my-3">
+                                            <button type="button" class="chip" data-monto="{{ $venta['total'] }}">Exacto</button>
+                                            @foreach ([50, 100, 200] as $b)
+                                                @if ($b >= $venta['total'])<button type="button" class="chip" data-monto="{{ $b }}">Q {{ $b }}</button>@endif
+                                            @endforeach
+                                        </div>
+                                        <div class="cambio-caja" id="caja-cambio"><span>Cambio a devolver</span><strong id="cambio">Q 0.00</strong></div>
+                                    </div>
+                                    <div class="teclado d-none d-md-grid align-self-start" id="teclado">
+                                        @foreach (['7','8','9','4','5','6','1','2','3','.','0','←'] as $k)
+                                            <button type="button" data-tecla="{{ $k }}" class="{{ $k === '←' ? 'borrar' : '' }}">{{ $k }}</button>
+                                        @endforeach
+                                    </div>
+                                </div>
                             </div>
                             <div id="tarjeta" class="d-none">
+                                <div class="alert alert-info py-2 small"><i class="bi bi-info-circle"></i> Cobre en el terminal bancario e ingrese el número de autorización del voucher.</div>
                                 <label class="form-label">Referencia del voucher (POS bancario)</label>
                                 <input name="referencia_voucher" class="form-control form-control-lg" value="{{ old('referencia_voucher') }}" placeholder="Número de autorización">
                             </div>
-                            <button class="btn btn-success btn-lg w-100 mt-4"><i class="bi bi-check2-circle"></i> Confirmar cobro</button>
+                            <button class="btn btn-success btn-lg w-100 mt-4"><i class="bi bi-check2-circle"></i> Confirmar cobro · {{ q($venta['total']) }}</button>
                             <a href="{{ route('pos.despacho') }}" class="btn btn-link w-100">Volver al despacho</a>
                         </form>
                     </div>
@@ -73,8 +92,15 @@ const actualizar = () => {
     document.getElementById('tarjeta').classList.toggle('d-none', metodo === 'efectivo');
     const cambio = (parseFloat(document.getElementById('recibido').value) || 0) - total;
     document.getElementById('cambio').textContent = 'Q ' + Math.max(0, cambio).toFixed(2);
-    document.getElementById('cambio').className = cambio < 0 ? 'text-danger' : 'text-success';
+    document.getElementById('caja-cambio').classList.toggle('falta', cambio < 0);
 };
+const recibido = document.getElementById('recibido');
+document.querySelectorAll('[data-monto]').forEach(b => b.addEventListener('click', () => { recibido.value = parseFloat(b.dataset.monto).toFixed(2); actualizar(); }));
+document.querySelectorAll('[data-tecla]').forEach(b => b.addEventListener('click', () => {
+    const t = b.dataset.tecla; let v = recibido.value;
+    if (t === '←') v = v.slice(0, -1); else if (t !== '.' || !v.includes('.')) v += t;
+    recibido.value = v; actualizar();
+}));
 document.querySelectorAll('input[name=metodo]').forEach(r => r.addEventListener('change', actualizar));
 document.getElementById('recibido').addEventListener('input', actualizar);
 actualizar();
