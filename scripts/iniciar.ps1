@@ -30,8 +30,9 @@ $hostServidor = '127.0.0.1'
 $url = "http://127.0.0.1:$Puerto"
 if ($Red) {
     # La URL del QR debe apuntar a la IP de esta computadora para que el celular (en la misma red Wi-Fi) la abra.
-    $ip = (Get-NetIPAddress -AddressFamily IPv4 | Where-Object { $_.IPAddress -notmatch '^(127\.|169\.254\.)' -and $_.PrefixOrigin -ne 'WellKnown' } |
-        Sort-Object InterfaceMetric | Select-Object -First 1).IPAddress
+    # Se elige la interfaz conectada con puerta de enlace (Wi-Fi o Ethernet), no las redes virtuales de WSL o Hyper-V.
+    $ip = (Get-NetIPConfiguration | Where-Object { $_.IPv4DefaultGateway -and $_.NetAdapter.Status -eq 'Up' } |
+        Sort-Object { $_.IPv4Interface.InterfaceMetric } | Select-Object -First 1).IPv4Address.IPAddress
     if (-not $ip) { Write-Host 'No se encontró una IP de red; se usará solo localhost.' -ForegroundColor Yellow }
     else { $hostServidor = '0.0.0.0'; $url = "http://${ip}:$Puerto" }
 }
