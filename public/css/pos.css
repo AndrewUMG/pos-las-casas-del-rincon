@@ -147,3 +147,17 @@ code, .codigo { font-family: 'JetBrains Mono', Consolas, monospace; }
     main { padding: 0 !important; }
     .card { box-shadow: none; }
 }
+
+/* Resultado del corte */
+.resultado { padding: .75rem 1rem; border-radius: .75rem; background: var(--sup-3); color: var(--tx-2); }
+.resultado strong { display: block; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.15rem; color: var(--tx); }
+.resultado.ok { background: var(--ok-bg); color: var(--ok-fg); } .resultado.ok strong { color: var(--ok-fg); }
+.resultado.falta { background: var(--err-bg); color: var(--err-fg); } .resultado.falta strong { color: var(--err-fg); }
+
+/* Interruptores, precios editados y tarjetas de tipo */
+.form-check-input:checked { background-color: var(--jade-600); border-color: var(--jade-600); }
+.form-switch .form-check-input { width: 2.5em; height: 1.35em; }
+tr.fila-modificada { background: var(--jade-100); }
+input.modificado { border-color: var(--jade-500); box-shadow: 0 0 0 .15rem rgba(26, 138, 112, .18); }
+#tipos .opcion-pago { padding: .85rem; gap: .5rem; }
+.form-switch .form-check-label { margin-left: .6rem; }

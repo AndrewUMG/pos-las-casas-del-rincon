@@ -114,7 +114,7 @@
 @if ($moduloActual)
     <div class="panel-control d-print-none">
         <nav class="migas" aria-label="Ruta de navegación">
-            <span>{{ $moduloActual }}</span><i class="bi bi-chevron-right"></i><span>@yield('titulo', 'Inicio')</span>
+            <span>{{ $moduloActual }}</span>@if (trim($__env->yieldContent('titulo')) !== $moduloActual)<i class="bi bi-chevron-right"></i><span>@yield('titulo', 'Inicio')</span>@endif
         </nav>
     </div>
 @endif

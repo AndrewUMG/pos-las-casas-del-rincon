@@ -2,7 +2,7 @@
 @section('titulo', 'Cupones QR')
 
 @section('content')
-<h1 class="h3 titulo-pagina mb-3"><i class="bi bi-qr-code"></i> Cupones QR emitidos</h1>
+<h1 class="h3 titulo-pagina mb-3">Cupones QR emitidos</h1>
 <div class="card"><div class="table-responsive">
     <table class="table table-hover align-middle mb-0">
         <thead><tr><th>Código</th><th>Factura</th><th>Cliente</th><th>Promoción</th><th>Tipo</th><th>Vence</th><th>Estado</th><th>Canjeado</th></tr></thead>

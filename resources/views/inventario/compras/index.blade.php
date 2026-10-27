@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 titulo-pagina mb-0"><i class="bi bi-cart-plus"></i> Compras a proveedores</h1>
+    <h1 class="h3 titulo-pagina mb-0">Compras a proveedores</h1>
     <a href="{{ route('compras.nueva') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Registrar compra</a>
 </div>
 <div class="card"><div class="table-responsive">
@@ -13,7 +13,7 @@
         @forelse ($compras as $c)
             <tr>
                 <td>{{ $c['id'] }}</td><td>{{ $c['fecha'] }}</td><td>{{ $c['numero_documento'] }}</td><td>{{ $c['proveedor'] }}</td>
-                <td>{{ $c['usuario'] }}</td><td class="text-end">{{ $c['productos'] }}</td><td class="text-end">{{ q($c['total']) }}</td>
+                <td>{{ $c['usuario'] }}</td><td class="text-end"><span class="badge bg-secondary">{{ $c['productos'] }} productos</span></td><td class="text-end">{{ q($c['total']) }}</td>
                 <td class="text-end"><a href="{{ route('compras.mostrar', $c['id']) }}" class="btn btn-sm btn-outline-secondary">Ver</a></td>
             </tr>
         @empty

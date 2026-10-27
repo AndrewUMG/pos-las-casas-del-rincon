@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 titulo-pagina mb-0"><i class="bi bi-box-seam"></i> Productos</h1>
+    <h1 class="h3 titulo-pagina mb-0">Productos</h1>
     <a href="{{ route('productos.create') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Nuevo producto</a>
 </div>
 <form class="row g-2 mb-3" method="get">
@@ -20,9 +20,9 @@
         <tbody>
         @forelse ($productos as $p)
             <tr class="{{ $p->activo ? '' : 'text-muted' }}">
-                <td class="small">{{ $p->codigo }}</td><td class="fw-semibold">{{ $p->nombre }}</td><td>{{ $p->familiaNombre }}</td>
+                <td class="font-monospace small text-secondary">{{ $p->codigo }}</td><td class="fw-semibold">{{ $p->nombre }}</td><td>{{ $p->familiaNombre }}</td>
                 <td class="text-end">{{ q($p->precio) }}</td><td class="text-end">{{ $p->precioMayoreo ? q($p->precioMayoreo) : '—' }}</td>
-                <td class="text-end">{{ $p->existencia }}</td>
+                <td class="text-end">@if ($p->existencia <= 0)<span class="badge bg-danger">Agotado</span>@elseif ($p->existencia <= 5)<span class="badge bg-warning">{{ $p->existencia }} · Bajo</span>@else{{ $p->existencia }}@endif</td>
                 <td>{!! $p->activo ? '<span class="badge bg-success">Activo</span>' : '<span class="badge bg-secondary">Inactivo</span>' !!}</td>
                 <td class="text-end text-nowrap">
                     <a href="{{ route('productos.edit', $p->id) }}" class="btn btn-sm btn-outline-secondary"><i class="bi bi-pencil"></i></a>

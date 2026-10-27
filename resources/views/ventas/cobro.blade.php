@@ -4,7 +4,7 @@
 @section('content')
 <div class="row justify-content-center">
     <div class="col-lg-9">
-        <h1 class="h3 titulo-pagina mb-3"><i class="bi bi-cash-coin"></i> Cobro de la venta #{{ $venta['id'] }}</h1>
+        <h1 class="h3 titulo-pagina mb-3">Cobro de la venta #{{ $venta['id'] }}</h1>
         <div class="row g-3">
             <div class="col-md-6">
                 <div class="card h-100">

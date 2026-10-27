@@ -2,8 +2,8 @@
 @section('titulo', 'Nueva devolución')
 
 @section('content')
-<h1 class="h3 titulo-pagina mb-3"><i class="bi bi-arrow-return-left"></i> Devolución de producto</h1>
-<div class="card mb-3"><div class="card-body">
+<h1 class="h3 titulo-pagina mb-3">Nueva devolución</h1>
+<div class="card mb-3"><div class="card-header">1 · Buscar la factura</div><div class="card-body">
     <form method="get" action="{{ route('devoluciones.nueva') }}" class="row g-2 align-items-end">
         <div class="col-md-4">
             <label class="form-label">Número de factura</label>
@@ -18,7 +18,7 @@
     @csrf
     <input type="hidden" name="factura_id" value="{{ $factura['id'] }}">
     <div class="card mb-3">
-        <div class="card-header">Factura {{ $factura['numero_completo'] }} · {{ $factura['fecha'] }} · {{ $factura['nombre'] }} (NIT {{ $factura['nit'] }})</div>
+        <div class="card-header">2 · Seleccione los productos a devolver · Factura {{ $factura['numero_completo'] }} · {{ $factura['fecha'] }} · {{ $factura['nombre'] }} (NIT {{ $factura['nit'] }})</div>
         <div class="table-responsive">
             <table class="table align-middle mb-0">
                 <thead><tr><th>Producto</th><th class="text-end">Vendido</th><th class="text-end">Ya devuelto</th>
@@ -37,7 +37,7 @@
             </table>
         </div>
     </div>
-    <div class="card"><div class="card-body row g-3 align-items-end">
+    <div class="card"><div class="card-header">3 · Motivo y reembolso</div><div class="card-body row g-3 align-items-end">
         <div class="col-md-3">
             <label class="form-label">Motivo</label>
             <select name="motivo" class="form-select" required>

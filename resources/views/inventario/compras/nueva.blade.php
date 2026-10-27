@@ -2,7 +2,7 @@
 @section('titulo', 'Registrar compra')
 
 @section('content')
-<h1 class="h3 titulo-pagina mb-3"><i class="bi bi-cart-plus"></i> Registrar compra de mercadería</h1>
+<h1 class="h3 titulo-pagina mb-3">Registrar compra de mercadería</h1>
 <form method="post" action="{{ route('compras.guardar') }}">
     @csrf
     <div class="card mb-3"><div class="card-body row g-3">

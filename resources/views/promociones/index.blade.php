@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 titulo-pagina mb-0"><i class="bi bi-gift"></i> Promociones</h1>
+    <h1 class="h3 titulo-pagina mb-0">Promociones</h1>
     <a href="{{ route('promociones.create') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Nueva promoción</a>
 </div>
 <div class="alert alert-light border small">

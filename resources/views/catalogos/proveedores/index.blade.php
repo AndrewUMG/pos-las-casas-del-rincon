@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 titulo-pagina mb-0"><i class="bi bi-truck"></i> Proveedores</h1>
+    <h1 class="h3 titulo-pagina mb-0">Proveedores</h1>
     <a href="{{ route('proveedores.create') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Nuevo proveedor</a>
 </div>
 <form class="mb-3" method="get"><div class="input-group" style="max-width:420px">

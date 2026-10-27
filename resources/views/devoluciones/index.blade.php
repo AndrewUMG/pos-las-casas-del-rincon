@@ -3,7 +3,7 @@
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-3">
-    <h1 class="h3 titulo-pagina mb-0"><i class="bi bi-arrow-return-left"></i> Devoluciones</h1>
+    <h1 class="h3 titulo-pagina mb-0">Devoluciones</h1>
     <a href="{{ route('devoluciones.nueva') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Nueva devolución</a>
 </div>
 <div class="card"><div class="table-responsive">

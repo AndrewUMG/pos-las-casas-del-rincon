@@ -9,17 +9,26 @@
         <form method="post" action="{{ $promocion ? route('promociones.update', $promocion->id) : route('promociones.store') }}">
             @csrf @if ($promocion) @method('PUT') @endif
             <div class="row g-3">
-                <div class="col-md-8"><label class="form-label">Nombre</label>
+                <div class="col-md-8"><label class="form-label">2 · Nombre</label>
                     <input name="nombre" class="form-control" value="{{ old('nombre', $promocion?->nombre) }}" required></div>
                 <div class="col-md-4"><label class="form-label">Modo</label>
                     <select name="modo" class="form-select">
                         <option value="automatica" @selected(old('modo', $promocion?->modo) === 'automatica')>Automática (en el despacho)</option>
                         <option value="qr" @selected(old('modo', $promocion?->modo) === 'qr')>Por código QR de la factura</option>
                     </select></div>
-                <div class="col-md-6"><label class="form-label">Tipo de promoción</label>
-                    <select name="tipo" id="tipo" class="form-select" required>
-                        @foreach ($tipos as $t)<option value="{{ $t->value }}" @selected(old('tipo', $promocion?->tipo->value) === $t->value)>{{ $t->etiqueta() }}</option>@endforeach
-                    </select></div>
+                <div class="col-12"><label class="form-label">1 · Tipo de promoción</label>
+                    <div class="row g-2" id="tipos">
+                        @php($iconosTipo = ['producto_gratuito' => 'bi-bag-heart', 'vale_regalo' => 'bi-gift', 'segundo_mitad' => 'bi-percent', 'mayoreo' => 'bi-boxes', 'puntos' => 'bi-star'])
+                        @foreach ($tipos as $t)
+                            <div class="col">
+                                <input type="radio" class="btn-check" name="tipo" id="tipo-{{ $t->value }}" value="{{ $t->value }}" @checked(old('tipo', $promocion?->tipo->value ?? $tipos[0]->value) === $t->value) required>
+                                <label class="opcion-pago flex-column align-items-start" for="tipo-{{ $t->value }}">
+                                    <i class="bi {{ $iconosTipo[$t->value] ?? 'bi-tag' }}"></i>
+                                    <span class="fw-semibold small">{{ $t->etiqueta() }}</span>
+                                </label>
+                            </div>
+                        @endforeach
+                    </div></div>
                 <div class="col-md-6"><label class="form-label">Producto promocionado</label>
                     <select name="producto_id" class="form-select"><option value="">—</option>
                         @foreach ($productos as $p)<option value="{{ $p->id }}" @selected(old('producto_id', $promocion?->productoId) == $p->id)>{{ $p->nombre }}</option>@endforeach
@@ -60,8 +69,8 @@ const ayudas = {
     mayoreo: ['Valor (no aplica)', 'Compra por mayoreo: al comprar la cantidad mínima de productos de la misma clase (familia), se cobra el precio de mayoreo del producto promocionado.'],
     puntos: ['Puntos por unidad', 'Puntos por producto: el cliente gana puntos por cada unidad de la familia indicada, para pagar en su próxima compra.'],
 };
-const tipo = document.getElementById('tipo');
-const mostrar = () => { const [e, a] = ayudas[tipo.value]; document.getElementById('etiqueta-valor').textContent = e; document.getElementById('ayuda').textContent = a; };
-tipo.addEventListener('change', mostrar); mostrar();
+const tipos = document.querySelectorAll('input[name=tipo]');
+const mostrar = () => { const v = document.querySelector('input[name=tipo]:checked').value; const [e, a] = ayudas[v]; document.getElementById('etiqueta-valor').textContent = e; document.getElementById('ayuda').textContent = a; };
+tipos.forEach(t => t.addEventListener('change', mostrar)); mostrar();
 </script>
 @endpush
