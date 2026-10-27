@@ -63,13 +63,13 @@
 </table>
 
 @if ($cupon)
-    <table style="width:100%; margin-top:16px; border:1px dashed #714B67">
+    <table style="width:100%; margin-top:16px; border:1px solid #e8a317; background:#fff4d9; border-radius:10px">
         <tr>
             <td class="qr" style="width:190px; text-align:center; padding:8px">
                 @isset($qrImagen)<img src="{{ $qrImagen }}" style="width:170px; height:170px">@else{!! $cupon['qr_svg'] !!}@endisset
             </td>
             <td style="padding:8px; vertical-align:middle">
-                <div style="font-weight:bold; color:#714B67">¡Escanea este código con tu celular!</div>
+                <div style="font-weight:bold; color:#1c1d1a">¡Escanea este código con tu celular!</div>
                 <div style="font-size:13px">Descubre la promoción que ganaste con esta compra y úsala en tu próxima visita.</div>
                 <div style="font-size:12px; color:#555; margin-top:6px">Código: <strong>{{ $cupon['token'] }}</strong> · Válido hasta {{ $cupon['vence'] }}</div>
             </td>

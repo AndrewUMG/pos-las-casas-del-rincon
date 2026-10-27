@@ -3,7 +3,7 @@
 Proyecto final del curso **Desarrollo Web**. Punto de venta e inventario para la venta de productos a
 colonias residenciales (Pastas, Productos Cárnicos, Embutidos, Lácteos, Golosinas, Aguas Gaseosas y Carbonatados).
 
-- **Tecnología:** PHP 8.3 + Laravel 13 (MVC, vistas Blade + Bootstrap 5) y PostgreSQL 16.
+- **Tecnología:** PHP 8.3 + Laravel 13 (MVC, vistas Blade + Bootstrap 5 con la identidad visual «Jade & Maíz») y PostgreSQL 16.
 - **Arquitectura:** DDD + Arquitectura Hexagonal (puertos y adaptadores), tal como se documentó en los modelos C4,
   los diagramas de casos de uso y los diagramas de arquitectura hexagonal.
 
@@ -28,30 +28,46 @@ colonias residenciales (Pastas, Productos Cárnicos, Embutidos, Lácteos, Golosi
 | — | Control del inventario que ingresa y que se vende | `Inventario` – `/compras`, `/existencias`, kardex |
 | — | Core de Empresas de Consumo Masivo (existente) | `Catálogos › Sincronizar con el Core` – `/core` |
 
-## Puesta en marcha
+## Puesta en marcha (Windows, un solo comando)
 
-### 1. Base de datos (PostgreSQL con Docker)
+Requisitos: **Git**, **Laragon** (PHP 8.3 + Composer) y **Docker Desktop** encendido.
+Guía completa, alternativa sin Docker y solución de problemas: [docs/INSTALACION.md](docs/INSTALACION.md).
 
-```bash
-docker compose up -d
+```powershell
+git clone https://github.com/AndrewUMG/pos-las-casas-del-rincon.git
+cd pos-las-casas-del-rincon
+powershell -ExecutionPolicy Bypass -File scripts\instalar.ps1 -Demo   # instala y carga datos de demostración
+powershell -ExecutionPolicy Bypass -File scripts\iniciar.ps1          # abre http://127.0.0.1:8000
 ```
 
-Crea el contenedor `pos_rincon_postgres` en el puerto **5433** (base `pos_rincon`, usuario `pos_user`, clave `pos_secret`).
+`instalar.ps1` levanta PostgreSQL en Docker (puerto **5433**), instala dependencias, crea `.env`, las tablas y los
+datos iniciales. Con `-Demo` además registra ventas, una devolución y una venta en proceso para presentar.
+`iniciar.ps1 -Red` publica el sistema en la IP de la computadora para leer el QR con el celular.
 
-### 2. Activar la extensión de PostgreSQL en PHP (Laragon)
-
-En Laragon: **Menú › PHP › Extensions** y marcar `pdo_pgsql` y `pgsql`.
-(Equivale a quitar el `;` de `extension=pdo_pgsql` y `extension=pgsql` en `php.ini`.)
-
-### 3. Instalar y preparar
+<details><summary>Instalación manual (sin scripts)</summary>
 
 ```bash
+docker compose up -d                       # PostgreSQL 16 en el puerto 5433
+cp .env.example .env
 composer install
+php artisan key:generate
 php artisan migrate:fresh --seed
+php artisan db:seed --class=DemoSeeder     # opcional: datos de demostración
 php artisan serve
 ```
 
-Abrir <http://127.0.0.1:8000>.
+En Laragon active antes **Menú › PHP › Extensions › pdo_pgsql y pgsql**.
+</details>
+
+## Presentación del proyecto
+
+| Material | Archivo |
+|----------|---------|
+| Documento explicativo (cómo se diseñó y construyó) | [docs/presentacion/Guia_del_proyecto.pdf](docs/presentacion/Guia_del_proyecto.pdf) |
+| Diapositivas para exponer | [docs/presentacion/Presentacion.pdf](docs/presentacion/Presentacion.pdf) |
+| Guion de la demostración en vivo | [docs/GUION_DEMO.md](docs/GUION_DEMO.md) |
+| Documento de entrega formal | [docs/Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf](docs/Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf) |
+| Mockup UI/UX en Figma | <https://www.figma.com/design/X00YwF6wiM0zh9zMWQiNqq> |
 
 ### Usuarios de prueba (creados por el seeder)
 
@@ -117,8 +133,8 @@ El puerto `CatalogoCorePort` tiene dos adaptadores, seleccionables en `.env`:
 
 ## Pruebas
 
-```bash
-php artisan test
+```powershell
+php -d extension=pdo_pgsql -d extension=pgsql vendor\phpunit\phpunit\phpunit   # o php artisan test si las extensiones están en php.ini
 ```
 
 - `tests/Unit/Dominio`: reglas del dominio puro (totales, promociones, puntos, cobro, corte de caja).

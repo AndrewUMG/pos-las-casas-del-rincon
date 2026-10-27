@@ -5,6 +5,15 @@ Cada diagrama está en PNG (para documentos y presentaciones) y en SVG (editable
 
 **Documento de entrega completo:** [Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf](Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf) (portada, requerimientos, modelo C4, casos de uso, DDD, arquitectura hexagonal, MVC, base de datos, Kanban, pantallas, pruebas e instalación).
 
+## Para presentar el proyecto
+
+| Material | Para qué |
+|----------|----------|
+| [presentacion/Guia_del_proyecto.pdf](presentacion/Guia_del_proyecto.pdf) | Explicación sencilla de cómo se diseñó y construyó (C4, DDD, hexagonal, BD, UI/UX, pruebas) |
+| [presentacion/Presentacion.pdf](presentacion/Presentacion.pdf) | 23 diapositivas 16:9 para exponer |
+| [GUION_DEMO.md](GUION_DEMO.md) | Recorrido de la demostración en vivo, requerimiento por requerimiento |
+| [INSTALACION.md](INSTALACION.md) | Montar el sistema en otra computadora (scripts, sin Docker, problemas frecuentes) |
+
 ## Modelo C4
 
 | Nivel | Diagrama |

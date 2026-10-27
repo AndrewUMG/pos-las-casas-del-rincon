@@ -1,0 +1,12 @@
+{
+  "origen": "Core de Empresas de Consumo Masivo",
+  "generado": "2026-10-23",
+  "productos": [
+    { "codigo": "7401001000059", "nombre": "Macarrones 200 g", "familia": "Pastas", "precio": 4.75, "precio_mayoreo": 4.10, "proveedor_nit": "3456789-1", "proveedor_nombre": "Distribuidora de Pastas La Moderna" },
+    { "codigo": "7401003000040", "nombre": "Chorizo argentino (lb)", "familia": "Embutidos", "precio": 26.00, "precio_mayoreo": 23.50, "proveedor_nit": "1234567-3", "proveedor_nombre": "Embutidos y Lácteos de Guatemala" },
+    { "codigo": "7401004000049", "nombre": "Yogur de fresa 1 L", "familia": "Lácteos", "precio": 17.50, "precio_mayoreo": 15.75, "proveedor_nit": "1234567-3", "proveedor_nombre": "Embutidos y Lácteos de Guatemala" },
+    { "codigo": "7401005000048", "nombre": "Gomitas de frutas 150 g", "familia": "Golosinas", "precio": 7.50, "precio_mayoreo": 6.50, "proveedor_nit": "5550001-7", "proveedor_nombre": "Confites del Altiplano" },
+    { "codigo": "7401006000047", "nombre": "Naranja gaseosa 600 ml", "familia": "Aguas Gaseosas", "precio": 6.50, "precio_mayoreo": 5.75, "proveedor_nit": "8765432-5", "proveedor_nombre": "Embotelladora del Pacífico" },
+    { "codigo": "7401007000015", "nombre": "Gatorade 600 ml", "familia": "Carbonatados", "precio": 10.50, "precio_mayoreo": 9.25, "proveedor_nit": "8765432-5", "proveedor_nombre": "Embotelladora del Pacífico" }
+  ]
+}
