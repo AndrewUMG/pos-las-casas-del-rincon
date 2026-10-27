@@ -2,11 +2,12 @@
 @section('titulo', $proveedor ? 'Editar proveedor' : 'Nuevo proveedor')
 
 @section('content')
-<div class="row justify-content-center"><div class="col-lg-7">
+@include('partials.cabecera-ficha', ['titulo' => $proveedor ? $proveedor->nombre : 'Nuevo proveedor', 'cancelar' => route('proveedores.index')])
+<div class="row g-3"><div class="col-lg-8">
 <div class="card">
-    <div class="card-header">{{ $proveedor ? 'Editar proveedor' : 'Nuevo proveedor' }}</div>
+    <div class="card-header">Datos</div>
     <div class="card-body">
-        <form method="post" action="{{ $proveedor ? route('proveedores.update', $proveedor->id) : route('proveedores.store') }}">
+        <form id="ficha" method="post" action="{{ $proveedor ? route('proveedores.update', $proveedor->id) : route('proveedores.store') }}">
             @csrf @if ($proveedor) @method('PUT') @endif
             <div class="row g-3">
                 <div class="col-md-4"><label class="form-label">NIT</label>
@@ -20,10 +21,11 @@
                 <div class="col-12"><label class="form-label">Dirección</label>
                     <input name="direccion" class="form-control" value="{{ old('direccion', $proveedor?->direccion) }}"></div>
             </div>
-            <div class="mt-4 d-flex gap-2"><button class="btn btn-pos">Guardar</button>
-                <a href="{{ route('proveedores.index') }}" class="btn btn-outline-secondary">Cancelar</a></div>
         </form>
     </div>
 </div>
+</div>
+<div class="col-lg-4">
+<div class="card mb-3"><div class="card-header">Productos del proveedor</div><div class="card-body"><div class="small text-muted">Cada producto se asigna a su proveedor desde el <a href="{{ route('productos.index') }}">catálogo de productos</a>. Las compras de mercadería se registran por proveedor en Inventario.</div></div></div>
 </div></div>
 @endsection

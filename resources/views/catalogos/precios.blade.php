@@ -3,13 +3,12 @@
 
 @section('content')
 <h1 class="h3 titulo-pagina mb-3">Catálogo de precios</h1>
-<form class="row g-2 mb-3" method="get">
-    <div class="col-md-4"><input name="q" value="{{ $q }}" class="form-control" placeholder="Buscar producto"></div>
-    <div class="col-md-3"><select name="familia" class="form-select"><option value="">Todas las familias</option>
-        @foreach ($familias as $id => $nombre)<option value="{{ $id }}" @selected($familia == $id)>{{ $nombre }}</option>@endforeach
-    </select></div>
-    <div class="col-md-2"><button class="btn btn-outline-secondary w-100"><i class="bi bi-funnel"></i> Filtrar</button></div>
-</form>
+<form class="mb-2" method="get" style="max-width:420px"><input type="hidden" name="familia" value="{{ $familia }}">
+    <div class="input-group"><input name="q" value="{{ $q }}" class="form-control" placeholder="Buscar producto"><button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button></div></form>
+<div class="d-flex flex-wrap gap-2 mb-3">
+    <a class="chip {{ $familia ? '' : 'activo' }}" href="?q={{ urlencode($q ?? '') }}">Todas</a>
+    @foreach ($familias as $id => $nombre)<a class="chip {{ $familia == $id ? 'activo' : '' }}" href="?familia={{ $id }}&q={{ urlencode($q ?? '') }}">{{ $nombre }}</a>@endforeach
+</div>
 <form method="post" action="{{ route('precios.actualizar') }}">
     @csrf
     <div class="card"><div class="table-responsive">

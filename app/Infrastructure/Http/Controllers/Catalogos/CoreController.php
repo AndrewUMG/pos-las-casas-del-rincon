@@ -18,6 +18,6 @@ class CoreController
     {
         $r = $core->sincronizar();
 
-        return back()->with('ok', "Sincronización completa: {$r['creados']} producto(s) nuevo(s), {$r['actualizados']} actualizado(s) y {$r['proveedores']} proveedor(es) nuevo(s).");
+        return back()->with('resultado', $r)->with('ok', "Sincronización completa: {$r['creados']} producto(s) nuevo(s), {$r['actualizados']} actualizado(s) y {$r['proveedores']} proveedor(es) nuevo(s).");
     }
 }

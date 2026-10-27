@@ -6,13 +6,12 @@
     <h1 class="h3 titulo-pagina mb-0">Productos</h1>
     <a href="{{ route('productos.create') }}" class="btn btn-pos"><i class="bi bi-plus-circle"></i> Nuevo producto</a>
 </div>
-<form class="row g-2 mb-3" method="get">
-    <div class="col-md-4"><input name="q" value="{{ $q }}" class="form-control" placeholder="Buscar por nombre o código"></div>
-    <div class="col-md-3"><select name="familia" class="form-select"><option value="">Todas las familias</option>
-        @foreach ($familias as $id => $nombre)<option value="{{ $id }}" @selected($familia == $id)>{{ $nombre }}</option>@endforeach
-    </select></div>
-    <div class="col-md-2"><button class="btn btn-outline-secondary w-100"><i class="bi bi-funnel"></i> Filtrar</button></div>
-</form>
+<form class="mb-2" method="get" style="max-width:420px"><input type="hidden" name="familia" value="{{ $familia }}">
+    <div class="input-group"><input name="q" value="{{ $q }}" class="form-control" placeholder="Buscar por nombre o código"><button class="btn btn-outline-secondary"><i class="bi bi-search"></i></button></div></form>
+<div class="d-flex flex-wrap gap-2 mb-3">
+    <a class="chip {{ $familia ? '' : 'activo' }}" href="?q={{ urlencode($q ?? '') }}">Todas</a>
+    @foreach ($familias as $id => $nombre)<a class="chip {{ $familia == $id ? 'activo' : '' }}" href="?familia={{ $id }}&q={{ urlencode($q ?? '') }}">{{ $nombre }}</a>@endforeach
+</div>
 <div class="card"><div class="table-responsive">
     <table class="table table-hover align-middle mb-0">
         <thead><tr><th>Código</th><th>Producto</th><th>Familia</th><th class="text-end">Precio</th><th class="text-end">Mayoreo</th>

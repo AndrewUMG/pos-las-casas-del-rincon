@@ -2,7 +2,8 @@
 @section('titulo', 'Core de Consumo Masivo')
 
 @section('content')
-<div class="row justify-content-center"><div class="col-lg-7">
+<h1 class="h3 titulo-pagina mb-3">Sincronizar con el Core</h1>
+<div class="row g-3"><div class="col-lg-7">
 <div class="card">
     <div class="card-header">Core de Empresas de Consumo Masivo (sistema existente)</div>
     <div class="card-body">
@@ -16,5 +17,19 @@
         </form>
     </div>
 </div>
+</div>
+<div class="col-lg-5">
+    <div class="card"><div class="card-header">Resultado de la última sincronización</div><div class="card-body">
+        @if (session('resultado'))
+            @php($r = session('resultado'))
+            <div class="row g-2">
+                @foreach ([['Nuevos', $r['creados'], 'ok'], ['Actualizados', $r['actualizados'], ''], ['Proveedores nuevos', $r['proveedores'], 'ok']] as [$l, $v, $t])
+                    <div class="col-4"><div class="resultado {{ $t }}"><div class="small">{{ $l }}</div><strong>{{ $v }}</strong></div></div>
+                @endforeach
+            </div>
+        @else
+            <div class="text-muted small">Aún no se ha sincronizado en esta sesión. El resultado aparecerá aquí.</div>
+        @endif
+    </div></div>
 </div></div>
 @endsection

@@ -5,6 +5,7 @@
 <h1 class="h3 titulo-pagina mb-3">Registrar compra de mercadería</h1>
 <form method="post" action="{{ route('compras.guardar') }}">
     @csrf
+    <div class="row g-3"><div class="col-lg-8">
     <div class="card mb-3"><div class="card-body row g-3">
         <div class="col-md-5"><label class="form-label">Proveedor</label>
             <select name="proveedor_id" class="form-select" required><option value="">Seleccione…</option>
@@ -25,14 +26,20 @@
             <table class="table align-middle mb-0">
                 <thead><tr><th>Producto</th><th style="width:130px">Cantidad</th><th style="width:160px">Costo unitario (Q)</th><th class="text-end" style="width:140px">Subtotal</th><th style="width:50px"></th></tr></thead>
                 <tbody id="filas"></tbody>
-                <tfoot><tr class="fw-bold"><td colspan="3" class="text-end">Total de la compra</td><td class="text-end" id="total">Q 0.00</td><td></td></tr></tfoot>
             </table>
         </div>
-        <div class="card-body border-top text-end">
-            <a href="{{ route('compras.index') }}" class="btn btn-outline-secondary">Cancelar</a>
-            <button class="btn btn-pos"><i class="bi bi-save"></i> Registrar compra</button>
-        </div>
     </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="card"><div class="card-header">Resumen</div><div class="card-body d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between"><span class="text-muted">Productos</span><span id="n-productos">0</span></div>
+            <div class="d-flex justify-content-between"><span class="text-muted">Unidades</span><span id="n-unidades">0</span></div>
+            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-1"><span class="fw-semibold">Total de la compra</span><span class="kpi-valor" id="total">Q 0.00</span></div>
+            <div class="alert alert-info py-2 small mb-1"><i class="bi bi-info-circle"></i> Al registrar, las existencias aumentan y se genera una entrada en el kardex de cada producto.</div>
+            <button class="btn btn-pos btn-lg w-100"><i class="bi bi-check-lg"></i> Registrar compra</button>
+            <a href="{{ route('compras.index') }}" class="btn btn-outline-secondary w-100">Cancelar</a>
+        </div></div>
+    </div></div>
 </form>
 
 <template id="plantilla">
@@ -68,6 +75,8 @@ function recalcular() {
         total += s;
     });
     document.getElementById('total').textContent = 'Q ' + total.toFixed(2);
+    document.getElementById('n-productos').textContent = document.querySelectorAll('#filas tr').length;
+    document.getElementById('n-unidades').textContent = [...document.querySelectorAll('#filas .cantidad')].reduce((a, i) => a + (parseInt(i.value) || 0), 0);
 }
 agregarFila();
 </script>

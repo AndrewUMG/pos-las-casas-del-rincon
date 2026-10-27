@@ -2,10 +2,11 @@
 @section('titulo', 'Facturación')
 
 @section('content')
-<div class="row justify-content-center">
-    <div class="col-lg-6">
+<h1 class="h3 titulo-pagina mb-3">Facturación</h1>
+<div class="row g-3">
+    <div class="col-lg-7">
         <div class="card">
-            <div class="card-header"><i class="bi bi-receipt"></i> Datos del cliente para la factura · Venta #{{ $venta['id'] }}</div>
+            <div class="card-header">Datos del cliente para la factura</div>
             <div class="card-body">
                 <p class="text-muted">Total pagado: <strong class="text-dark">{{ q($venta['total']) }}</strong>.
                     Si el cliente no proporciona NIT se emite a <strong>CF</strong> (consumidor final).</p>
@@ -13,7 +14,7 @@
                     @csrf
                     <div class="mb-3">
                         <label class="form-label">NIT</label>
-                        <input name="nit" class="form-control form-control-lg" value="{{ old('nit', $cliente?->nit ?? 'CF') }}" autofocus>
+                        <div class="input-group"><input name="nit" id="nit" class="form-control form-control-lg" value="{{ old('nit', $cliente?->nit ?? 'CF') }}" autofocus><button type="button" class="btn btn-outline-secondary" onclick="document.getElementById('nit').value='CF'">Usar CF (consumidor final)</button></div>
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Nombre</label>
@@ -31,6 +32,13 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="col-lg-5">
+        <div class="card"><div class="card-header">Resumen</div><div class="card-body d-flex flex-column gap-2">
+            <div class="d-flex justify-content-between"><span class="text-muted">Venta</span><span>#{{ $venta['id'] }}</span></div>
+            <div class="d-flex justify-content-between"><span class="text-muted">Estado</span><span class="badge bg-success">Cobrada</span></div>
+            <div class="d-flex justify-content-between align-items-center border-top pt-3 mt-1"><span class="fw-semibold">Total pagado</span><span class="kpi-valor">{{ q($venta['total']) }}</span></div>
+        </div></div>
     </div>
 </div>
 @endsection

@@ -2,21 +2,22 @@
 @section('titulo', $promocion ? 'Editar promoción' : 'Nueva promoción')
 
 @section('content')
-<div class="row justify-content-center"><div class="col-lg-8">
+@include('partials.cabecera-ficha', ['titulo' => $promocion ? $promocion->nombre : 'Nueva promoción', 'cancelar' => route('promociones.index')])
+<div class="row g-3"><div class="col-lg-8">
 <div class="card">
-    <div class="card-header">{{ $promocion ? 'Editar promoción' : 'Nueva promoción' }}</div>
+    <div class="card-header">Datos</div>
     <div class="card-body">
-        <form method="post" action="{{ $promocion ? route('promociones.update', $promocion->id) : route('promociones.store') }}">
+        <form id="ficha" method="post" action="{{ $promocion ? route('promociones.update', $promocion->id) : route('promociones.store') }}">
             @csrf @if ($promocion) @method('PUT') @endif
             <div class="row g-3">
-                <div class="col-md-8"><label class="form-label">2 · Nombre</label>
+                <div class="col-md-8"><label class="form-label">Nombre</label>
                     <input name="nombre" class="form-control" value="{{ old('nombre', $promocion?->nombre) }}" required></div>
                 <div class="col-md-4"><label class="form-label">Modo</label>
                     <select name="modo" class="form-select">
                         <option value="automatica" @selected(old('modo', $promocion?->modo) === 'automatica')>Automática (en el despacho)</option>
                         <option value="qr" @selected(old('modo', $promocion?->modo) === 'qr')>Por código QR de la factura</option>
                     </select></div>
-                <div class="col-12"><label class="form-label">1 · Tipo de promoción</label>
+                <div class="col-12"><label class="form-label">Tipo de promoción</label>
                     <div class="row g-2" id="tipos">
                         @php($iconosTipo = ['producto_gratuito' => 'bi-bag-heart', 'vale_regalo' => 'bi-gift', 'segundo_mitad' => 'bi-percent', 'mayoreo' => 'bi-boxes', 'puntos' => 'bi-star'])
                         @foreach ($tipos as $t)
@@ -46,17 +47,17 @@
                     <input type="date" name="fecha_inicio" class="form-control" value="{{ old('fecha_inicio', $promocion?->fechaInicio->format('Y-m-d') ?? now()->format('Y-m-d')) }}" required></div>
                 <div class="col-md-4"><label class="form-label">Hasta</label>
                     <input type="date" name="fecha_fin" class="form-control" value="{{ old('fecha_fin', $promocion?->fechaFin->format('Y-m-d') ?? now()->addMonth()->format('Y-m-d')) }}" required></div>
-                <div class="col-md-4 d-flex align-items-end"><div class="form-check">
-                    <input type="checkbox" name="activa" value="1" class="form-check-input" id="activa" @checked(old('activa', $promocion?->activa ?? true))>
-                    <label class="form-check-label" for="activa">Activa</label></div></div>
                 <div class="col-12"><label class="form-label">Descripción (opcional)</label>
                     <input name="descripcion" class="form-control" value="{{ old('descripcion', $promocion?->descripcion) }}"></div>
             </div>
-            <div class="mt-4 d-flex gap-2"><button class="btn btn-pos">Guardar</button>
-                <a href="{{ route('promociones.index') }}" class="btn btn-outline-secondary">Cancelar</a></div>
         </form>
     </div>
 </div>
+</div>
+<div class="col-lg-4">
+<div class="card mb-3"><div class="card-header">Estado</div><div class="card-body"><div class="d-flex justify-content-between align-items-center"><div><div class="fw-semibold">Promoción activa</div><div class="small text-muted">Se aplica sola al despachar (o al canjear el QR)</div></div>
+        <div class="form-check form-switch m-0"><input type="checkbox" name="activa" value="1" form="ficha" class="form-check-input" id="activa" @checked(old('activa', $promocion?->activa ?? true))></div></div></div></div><div class="card mb-3"><div class="card-header">Así se verá en el despacho</div><div class="card-body"><div class="d-flex justify-content-between align-items-center p-3 rounded-3" style="background:var(--sup-2)"><div><div class="fw-semibold">Producto × 2</div><div class="promo" id="vista-promo">{{ $promocion?->tipo->etiqueta() ?? 'Promoción' }}</div></div><div class="fw-semibold">Q 0.00</div></div>
+        <div class="alert alert-info py-2 small mt-3 mb-0"><i class="bi bi-info-circle"></i> Las promociones automáticas se aplican solas; el cajero no necesita elegirlas.</div></div></div>
 </div></div>
 @endsection
 
@@ -70,7 +71,7 @@ const ayudas = {
     puntos: ['Puntos por unidad', 'Puntos por producto: el cliente gana puntos por cada unidad de la familia indicada, para pagar en su próxima compra.'],
 };
 const tipos = document.querySelectorAll('input[name=tipo]');
-const mostrar = () => { const v = document.querySelector('input[name=tipo]:checked').value; const [e, a] = ayudas[v]; document.getElementById('etiqueta-valor').textContent = e; document.getElementById('ayuda').textContent = a; };
+const mostrar = () => { const v = document.querySelector('input[name=tipo]:checked').value; const [e, a] = ayudas[v]; document.getElementById('etiqueta-valor').textContent = e; document.getElementById('ayuda').textContent = a; document.getElementById('vista-promo').textContent = document.querySelector('input[name=tipo]:checked + label span').textContent; };
 tipos.forEach(t => t.addEventListener('change', mostrar)); mostrar();
 </script>
 @endpush

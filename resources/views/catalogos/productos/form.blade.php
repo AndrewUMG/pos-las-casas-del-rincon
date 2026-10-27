@@ -2,11 +2,12 @@
 @section('titulo', $producto ? 'Editar producto' : 'Nuevo producto')
 
 @section('content')
-<div class="row justify-content-center"><div class="col-lg-8">
+@include('partials.cabecera-ficha', ['titulo' => $producto ? $producto->nombre : 'Nuevo producto', 'cancelar' => route('productos.index')])
+<div class="row g-3"><div class="col-lg-8">
 <div class="card">
-    <div class="card-header">{{ $producto ? 'Editar producto' : 'Nuevo producto' }}</div>
+    <div class="card-header">Datos</div>
     <div class="card-body">
-        <form method="post" action="{{ $producto ? route('productos.update', $producto->id) : route('productos.store') }}">
+        <form id="ficha" method="post" action="{{ $producto ? route('productos.update', $producto->id) : route('productos.store') }}">
             @csrf @if ($producto) @method('PUT') @endif
             <div class="row g-3">
                 <div class="col-md-4"><label class="form-label">Código de barras</label>
@@ -27,17 +28,18 @@
                     <input type="number" step="0.01" min="0.01" name="precio_mayoreo" class="form-control" value="{{ old('precio_mayoreo', $producto?->precioMayoreo) }}"></div>
                 <div class="col-md-4"><label class="form-label">Existencia</label>
                     <input class="form-control" value="{{ $producto?->existencia ?? 0 }}" disabled>
-                    <div class="form-text">Cambia con compras, ventas y devoluciones.</div></div>
-                <div class="col-12 form-check ms-2">
-                    <input type="hidden" name="activo" value="0">
-                    <input type="checkbox" name="activo" value="1" class="form-check-input" id="activo" @checked(old('activo', $producto?->activo ?? true))>
-                    <label class="form-check-label" for="activo">Producto activo (disponible para la venta)</label>
-                </div>
-            </div>
-            <div class="mt-4 d-flex gap-2"><button class="btn btn-pos">Guardar</button>
-                <a href="{{ route('productos.index') }}" class="btn btn-outline-secondary">Cancelar</a></div>
+                    <div class="form-text">Cambia con compras, ventas y devoluciones.</div></div>            </div>
         </form>
     </div>
 </div>
+</div>
+<div class="col-lg-4">
+@if ($producto)
+<div class="card mb-3"><div class="card-header">Existencia</div><div class="card-body"><div class="d-flex align-items-center gap-3"><span class="kpi-icono" style="width:52px;height:52px"><i class="bi bi-boxes"></i></span>
+        <div><div class="kpi-valor">{{ $producto->existencia }} unidades</div><div class="small text-muted">Solo cambia con compras, ventas y devoluciones</div></div></div>
+        <a href="{{ route('inventario.kardex', $producto->id) }}" class="btn btn-outline-secondary w-100 mt-3"><i class="bi bi-journal-text"></i> Ver kardex del producto</a></div></div>
+@endif
+<div class="card mb-3"><div class="card-header">Disponibilidad</div><div class="card-body"><div class="d-flex justify-content-between align-items-center"><div><div class="fw-semibold">Producto activo</div><div class="small text-muted">Disponible para la venta en el despacho</div></div>
+        <div class="form-check form-switch m-0"><input type="hidden" name="activo" value="0" form="ficha"><input type="checkbox" name="activo" value="1" form="ficha" class="form-check-input" id="activo" @checked(old('activo', $producto?->activo ?? true))></div></div></div></div>
 </div></div>
 @endsection
