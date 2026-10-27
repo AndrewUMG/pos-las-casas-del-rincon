@@ -113,7 +113,7 @@ así que no tocan sus datos. (Si las extensiones ya están activas en `php.ini`,
 |---------|-------|----------|
 | `No se encontró 'php'` | PHP no está instalado o no está en el PATH | Instale Laragon en `C:\laragon` o agregue PHP al PATH |
 | `Docker no está encendido` | Docker Desktop cerrado | Ábralo y espere a *Engine running* |
-| `could not find driver` | Falta la extensión `pdo_pgsql` | Use los scripts (la activan solos) o actívela en `php.ini` |
+| `could not find driver` o `The zip extension and unzip/7z commands are both missing` | Falta una extensión de PHP (`pdo_pgsql`, `pgsql` o `zip`) | Use los scripts (las activan solos) o actívelas en `php.ini` |
 | `port is already allocated` (5433) | Otro PostgreSQL usa el puerto | Cambie `5433` en `docker-compose.yml` y en `DB_PORT` del `.env` |
 | `Address already in use` (8000) | Otro programa usa el puerto 8000 | `scripts\iniciar.ps1 -Puerto 8080` |
 | La ejecución de scripts está deshabilitada | Política de PowerShell | Use siempre `powershell -ExecutionPolicy Bypass -File ...` |

@@ -30,18 +30,23 @@ $version = (php -r 'echo PHP_VERSION;')
 if ([version]$version -lt [version]'8.3.0') { Falla "Se necesita PHP 8.3 o superior (encontrado: $version)." }
 Write-Host "PHP $version, Composer y Docker encontrados."
 
-# Si pdo_pgsql no está activo en php.ini, se activa solo para estos comandos.
-$PhpArgs = @()
+# Extensiones que faltan en php.ini (pdo_pgsql y pgsql para PostgreSQL, zip para que Composer descargue paquetes):
+# se activan con un .ini adicional que aplica a todo PHP que se ejecute desde este script, incluido Composer.
+$faltan = @()
 $modulos = (php -m) -join ' '
-foreach ($ext in 'pdo_pgsql', 'pgsql', 'zip') {
-    if ($modulos -notmatch "\b$ext\b") { $PhpArgs += @('-d', "extension=$ext") }
+foreach ($ext in 'pdo_pgsql', 'pgsql', 'zip') { if ($modulos -notmatch "\b$ext\b") { $faltan += $ext } }
+if ($faltan.Count -gt 0) {
+    $iniDir = Join-Path $env:TEMP 'pos-rincon-php'
+    New-Item -ItemType Directory -Force $iniDir | Out-Null
+    ($faltan | ForEach-Object { "extension=$_" }) | Set-Content (Join-Path $iniDir 'pos-rincon.ini') -Encoding ascii
+    $env:PHP_INI_SCAN_DIR = ";$iniDir"
+    $prueba = (php -m) -join ' '
+    foreach ($ext in $faltan) {
+        if ($prueba -notmatch "\b$ext\b") { Falla "PHP no tiene la extensión $ext. Actívela en php.ini (extension=$ext)." }
+    }
+    Write-Host "Extensiones activadas solo para este proyecto: $($faltan -join ', ')." -ForegroundColor Yellow
 }
-if ($PhpArgs.Count -gt 0) {
-    $prueba = (php @PhpArgs -m) -join ' '
-    if ($prueba -notmatch '\bpdo_pgsql\b') { Falla 'PHP no tiene la extensión pdo_pgsql. Actívela en php.ini (extension=pdo_pgsql y extension=pgsql).' }
-    Write-Host 'Las extensiones de PostgreSQL se activarán solo para este proyecto (no están en php.ini).' -ForegroundColor Yellow
-}
-function Artisan { php @PhpArgs artisan @args; if ($LASTEXITCODE -ne 0) { Falla "Falló: php artisan $args" } }
+function Artisan { php artisan @args; if ($LASTEXITCODE -ne 0) { Falla "Falló: php artisan $args" } }
 
 docker info *> $null
 if ($LASTEXITCODE -ne 0) { Falla 'Docker no está encendido. Abra Docker Desktop, espere a que diga "Running" y vuelva a ejecutar.' }

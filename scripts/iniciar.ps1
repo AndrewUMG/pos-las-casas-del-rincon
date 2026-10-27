@@ -22,9 +22,16 @@ for ($i = 0; $i -lt 30; $i++) {
     Start-Sleep -Seconds 2
 }
 
-$PhpArgs = @()
+# Extensiones de PostgreSQL que falten en php.ini: se activan con un .ini adicional para el servidor de este proyecto.
+$faltan = @()
 $modulos = (php -m) -join ' '
-foreach ($ext in 'pdo_pgsql', 'pgsql') { if ($modulos -notmatch "\b$ext\b") { $PhpArgs += @('-d', "extension=$ext") } }
+foreach ($ext in 'pdo_pgsql', 'pgsql') { if ($modulos -notmatch "\b$ext\b") { $faltan += $ext } }
+if ($faltan.Count -gt 0) {
+    $iniDir = Join-Path $env:TEMP 'pos-rincon-php'
+    New-Item -ItemType Directory -Force $iniDir | Out-Null
+    ($faltan | ForEach-Object { "extension=$_" }) | Set-Content (Join-Path $iniDir 'pos-rincon.ini') -Encoding ascii
+    $env:PHP_INI_SCAN_DIR = ";$iniDir"
+}
 
 $hostServidor = '127.0.0.1'
 $url = "http://127.0.0.1:$Puerto"
@@ -38,12 +45,12 @@ if ($Red) {
 }
 $envTexto = (Get-Content .env) -replace '^APP_URL=.*', "APP_URL=$url"
 [IO.File]::WriteAllLines((Join-Path (Get-Location) '.env'), $envTexto, (New-Object Text.UTF8Encoding $false))
-php @PhpArgs artisan config:clear | Out-Null
+php artisan config:clear | Out-Null
 
 Write-Host "`nSistema POS en $url" -ForegroundColor Green
 Write-Host 'Usuarios: admin / admin123   cajero / cajero123'
 Write-Host 'Para detenerlo presione Ctrl + C.'
 Start-Process $url
-# Se usa el servidor integrado de PHP para que las extensiones activadas arriba también apliquen a cada petición.
+# Se usa el servidor integrado de PHP desde public/ (equivale a php artisan serve).
 Set-Location public
-php @PhpArgs -S "${hostServidor}:$Puerto" ../vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php
+php -S "${hostServidor}:$Puerto" ../vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php
