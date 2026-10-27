@@ -11,6 +11,7 @@ Cada diagrama está en PNG (para documentos y presentaciones) y en SVG (editable
 |----------|----------|
 | [presentacion/Guia_del_proyecto.pdf](presentacion/Guia_del_proyecto.pdf) | Explicación sencilla de cómo se diseñó y construyó (C4, DDD, hexagonal, BD, UI/UX, pruebas) |
 | [presentacion/Presentacion.pdf](presentacion/Presentacion.pdf) | 23 diapositivas 16:9 para exponer |
+| [presentacion/Presentacion_resumida.pdf](presentacion/Presentacion_resumida.pdf) | 13 diapositivas: un modelo por diapositiva y el funcionamiento de la plataforma |
 | [GUION_DEMO.md](GUION_DEMO.md) | Recorrido de la demostración en vivo, requerimiento por requerimiento |
 | [INSTALACION.md](INSTALACION.md) | Montar el sistema en otra computadora (scripts, sin Docker, problemas frecuentes) |
 

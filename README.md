@@ -64,7 +64,8 @@ En Laragon active antes **Menú › PHP › Extensions › pdo_pgsql y pgsql**.
 | Material | Archivo |
 |----------|---------|
 | Documento explicativo (cómo se diseñó y construyó) | [docs/presentacion/Guia_del_proyecto.pdf](docs/presentacion/Guia_del_proyecto.pdf) |
-| Diapositivas para exponer | [docs/presentacion/Presentacion.pdf](docs/presentacion/Presentacion.pdf) |
+| Diapositivas para exponer (completa, 23) | [docs/presentacion/Presentacion.pdf](docs/presentacion/Presentacion.pdf) |
+| Diapositivas resumidas (13, un modelo por diapositiva) | [docs/presentacion/Presentacion_resumida.pdf](docs/presentacion/Presentacion_resumida.pdf) |
 | Guion de la demostración en vivo | [docs/GUION_DEMO.md](docs/GUION_DEMO.md) |
 | Documento de entrega formal | [docs/Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf](docs/Proyecto_Final_Las_Casas_del_Rincon_Guatemalteco.pdf) |
 | Mockup UI/UX en Figma | <https://www.figma.com/design/X00YwF6wiM0zh9zMWQiNqq> |
